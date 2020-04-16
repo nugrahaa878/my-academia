@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Soul.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">tutorial-5</a> &gt; <a href="index.source.html" class="el_package">id.ac.ui.cs.advprog.tutorial5.model</a> &gt; <span class="el_source">Soul.java</span></div><h1>Soul.java</h1><pre class="source lang-java linenums">package id.ac.ui.cs.advprog.tutorial5.model;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = &quot;soul&quot;)
+public class Soul {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+
+    @Column(name = &quot;name&quot;)
+    private String name;
+
+    @Column(name = &quot;age&quot;)
+    private int age;
+
+    @Column(name = &quot;gender&quot;)
+    private String gender;
+
+    @Column(name = &quot;occupation&quot;)
+    private String occupation;
+    // TODO: Lengkapi atribut yang sudah anda rencanakan. Ingat bahwa atribut yang dibuat bersifat privat.
+
+<span class="fc" id="L29">    public Soul(){</span>
+
+<span class="fc" id="L31">    }</span>
+
+<span class="fc" id="L33">    public Soul(String name, int age, String gender, String occupation){</span>
+<span class="fc" id="L34">        this.name = name;</span>
+<span class="fc" id="L35">        this.age = age;</span>
+<span class="fc" id="L36">        this.gender = gender;</span>
+<span class="fc" id="L37">        this.occupation = occupation;</span>
+<span class="fc" id="L38">    }</span>
+
+    public String getName(){
+<span class="fc" id="L41">        return this.name;</span>
+    }
+
+    public void setName(String name){
+<span class="fc" id="L45">        this.name = name;</span>
+<span class="fc" id="L46">    }</span>
+
+    public int getAge(){
+<span class="fc" id="L49">        return this.age;</span>
+    }
+
+    public void setAge(int age){
+<span class="fc" id="L53">        this.age = age;</span>
+<span class="fc" id="L54">    }</span>
+
+    public String getGender(){
+<span class="fc" id="L57">        return this.gender;</span>
+    }
+
+    public void setGender(String gender){
+<span class="fc" id="L61">        this.gender = gender;</span>
+<span class="fc" id="L62">    }</span>
+
+    public String getOccupation(){
+<span class="fc" id="L65">        return this.occupation;</span>
+    }
+
+    public void setOccupation(String occupation){
+<span class="fc" id="L69">        this.occupation = occupation;</span>
+<span class="fc" id="L70">    }</span>
+
+    public long getId(){
+<span class="fc" id="L73">        return this.id;</span>
+    }
+
+    public void setId(long id){
+<span class="fc" id="L77">        this.id = id;</span>
+<span class="fc" id="L78">    }</span>
+
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

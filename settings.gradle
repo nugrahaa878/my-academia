@@ -1,0 +1,14 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal ()
+    }
+}
+
+rootProject.name = 'AdvProg-Tutorial'
+//include 'tutorial0'
+//include 'tutorial-1'
+//include 'tutorial-2'
+//include 'tutorial-3'
+//include 'tutorial-4'
+include 'MyAc'
+
