@@ -11,4 +11,5 @@ rootProject.name = 'AdvProg-Tutorial'
 //include 'tutorial-3'
 //include 'tutorial-4'
 include 'MyAc'
+include 'test'
 

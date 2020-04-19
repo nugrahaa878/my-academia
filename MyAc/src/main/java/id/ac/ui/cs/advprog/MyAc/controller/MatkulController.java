@@ -34,33 +34,11 @@ public class MatkulController {
     @GetMapping("/{kode}")
     public ResponseEntity<Matkul> findById(@PathVariable String kode){
         Optional<Matkul> optionalMatkul = matkulService.findMatkul(kode);
-        if(optionalMatkul.isEmpty()){
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+//        if(optionalMatku){
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
         return new ResponseEntity<Matkul>(optionalMatkul.get(),HttpStatus.OK);
 //        return null;
     }
-
-//    @PutMapping("/{kode}")
-//    public ResponseEntity<Matkul> update(@PathVariable String kode, @RequestBody Matkul matkul){
-//        Optional<Matkul> optionalMatkul = matkulService.findMatkul(kode);
-//        if(optionalMatkul.isEmpty()){
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//        matkul.setId(kode);
-//        return new ResponseEntity<>(matkulService.rewrite(matkul),HttpStatus.OK);
-////        return null;
-//    }
-//
-//    @DeleteMapping("/{kode}")
-//    public ResponseEntity delete(@PathVariable String kode){
-//        Optional<Matkul> optionalMatkul = matkulService.findMatkul(kode);
-//        if(optionalSoul.isEmpty()){
-//            return new ResponseEntity(HttpStatus.NOT_FOUND);
-//        }
-//        soulService.erase(id);
-//        return new ResponseEntity(HttpStatus.OK);
-//    }
-
 
 }
