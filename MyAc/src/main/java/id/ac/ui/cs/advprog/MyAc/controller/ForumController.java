@@ -17,11 +17,26 @@ public class ForumController {
     private ForumService forumService;
 
     @RequestMapping("/forum")
-    public String viewForumPage(Model model) {
+    public String viewHalamanForum(Model model) {
         List<Post> postList = forumService.findAll();
         model.addAttribute("postList", postList);
 
-        return "halamanForum";
+        return "halamanUtamaForum";
+    }
+
+    @RequestMapping("/new")
+    public String showHalamanPostBaru(Model model) {
+        Post post = new Post();
+        model.addAttribute("post", post);
+
+        return "halamanPostBaru";
+    }
+
+    @RequestMapping(value = "/simpan", method = RequestMethod.POST)
+    public String simpanPost(@ModelAttribute("post") Post post) {
+        forumService.save(post);
+
+        return "redirect:/forum";
     }
 
 }
