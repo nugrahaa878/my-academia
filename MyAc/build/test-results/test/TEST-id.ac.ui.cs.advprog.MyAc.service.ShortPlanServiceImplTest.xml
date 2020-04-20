@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="id.ac.ui.cs.advprog.MyAc.service.ShortPlanServiceImplTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-04-20T19:17:14" hostname="LAPTOP-SJCI920E" time="0.047">
+  <properties/>
+  <testcase name="testGetComponents()" classname="id.ac.ui.cs.advprog.MyAc.service.ShortPlanServiceImplTest" time="0.036"/>
+  <testcase name="testAddComponents()" classname="id.ac.ui.cs.advprog.MyAc.service.ShortPlanServiceImplTest" time="0.009"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

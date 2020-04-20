@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="id.ac.ui.cs.advprog.MyAc.MyAcApplicationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-20T19:17:14" hostname="LAPTOP-SJCI920E" time="0.0">
+  <properties/>
+  <testcase name="contextLoads()" classname="id.ac.ui.cs.advprog.MyAc.MyAcApplicationTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
