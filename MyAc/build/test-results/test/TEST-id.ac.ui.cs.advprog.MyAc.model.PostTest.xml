@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="id.ac.ui.cs.advprog.MyAc.model.PostTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-04-20T14:55:01" hostname="LAPTOP-CAQMALIR" time="0.082">
+<testsuite name="id.ac.ui.cs.advprog.MyAc.model.PostTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-04-20T15:23:31" hostname="LAPTOP-CAQMALIR" time="0.071">
   <properties/>
-  <testcase name="testGetIsiPost()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.063"/>
-  <testcase name="testGetJudul()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.002"/>
+  <testcase name="testGetIsiPost()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.05"/>
+  <testcase name="testGetJudul()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.001"/>
   <testcase name="testGetId()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.001"/>
-  <testcase name="testSetIsiPost()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.002"/>
+  <testcase name="testSetIsiPost()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.001"/>
   <testcase name="testGetTopikMataKuliah()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.001"/>
-  <testcase name="testSetTopikMataKuliah()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.001"/>
-  <testcase name="testSetJudul()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.001"/>
+  <testcase name="testSetTopikMataKuliah()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.002"/>
+  <testcase name="testSetJudul()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
