@@ -2,13 +2,7 @@ package id.ac.ui.cs.advprog.MyAc.model;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import id.ac.ui.cs.advprog.MyAc.model.*;
 
 public class PostTest {
 
