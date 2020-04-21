@@ -4,36 +4,38 @@
 <head>
     <meta charset="utf-8"/>
     <title>Forum diskusi</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/forum.css">
 </head>
-<body>
-<div align="center">
-    <h1>Forum Diskusi</h1>
-    <a href="/new">Create New Product</a>
-    <br/><br/>
-    <table border="1" cellpadding="10">
-        <thead>
-        <tr>
-            <th>id</th>
-            <th>Judul</th>
-            <th>Isi</th>
-            <th>Mata Kuliah</th>
 
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="post : ${postList}">
-            <td th:text="${post.id}">Product ID</td>
-            <td th:text="${post.judul}">Name</td>
-            <td th:text="${post.isiPost}">Brand</td>
-            <td th:text="${post.topikMataKuliah}">Made in</td>
-            <!--            <td>-->
-            <!--                <a th:href="/@{'/edit/' + ${product.id}}">Edit</a>-->
-            <!--                &nbsp;&nbsp;&nbsp;-->
-            <!--                <a th:href="/@{'/delete/' + ${product.id}}">Delete</a>-->
-            <!--            </td>-->
-        </tr>
-        </tbody>
-    </table>
+<body>
+<div >
+    <div align="center">
+        <h1>Forum Diskusi</h1>
+        <a href="/forum/new">Buat</a>
+        <br/><br/>
+    </div>
+    <div class="container" >
+        <div class="card" th:each="post : ${postList}" style="word-wrap: break-word;">
+            <div class="card-header">
+                <h1><a th:text="${post.judul}" th:href="@{'/post/' + ${post.id}}">Judul</a></h1>
+                <!--        <div th:text="'Created: ' + ${#dates.format(post.createDate, 'dd-MMM-yyyy')} + ' by '">-->
+                <!--            Created by-->
+                <!--        </div>-->
+                <div><a th:text="${post.topikMataKuliah}">User</a>
+                </div>
+            </div>
+            <h3 class="card-body" th:text="${post.isiPost}" >Body</h3>
+            <br></br>
+        </div>
+    </div>
 </div>
+
+
+<script type="text/javascript"
+        src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
+
 </html>

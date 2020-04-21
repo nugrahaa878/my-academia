@@ -4,33 +4,30 @@
 <head>
     <meta charset="utf-8" />
     <title>Membuat Post baru</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/forum.css">
 </head>
 <body>
-<div align="center">
+<div class="container">
     <h1>Membuat Post</h1>
-    <br />
-    <form action="#" th:action="@{/simpan}" th:object="${post}"
-          method="post">
 
-        <table border="0" cellpadding="10">
-            <tr>
-                <td>Judul</td>
-                <td><input type="text" th:field="*{judul}" /></td>
-            </tr>
-            <tr>
-                <td>Isi Bahasan</td>
-                <td><input type="text" th:field="*{isiPost}" /></td>
-            </tr>
-            <tr>
-                <td>Topik Mata Kuliah</td>
-                <td><input type="text" th:field="*{topikMataKuliah}" /></td>
-            </tr>
-
-            <tr>
-                <td colspan="2"><button type="submit">Save</button> </td>
-            </tr>
-        </table>
+    <form action="#" th:action="@{/simpan}" th:object="${post}" method="post">
+        <div class="form-group">
+            <label for="inputJudul">Judul</label>
+            <input type="text" class="form-control" id="inputJudul" th:field="*{judul}">
+        </div>
+        <div class="form-group">
+            <label for="inputTopik">Topik Mata Kuliah</label>
+            <input type="text" class="form-control" id="inputTopik" th:field="*{topikMataKuliah}">
+        </div>
+        <div class="form-group">
+            <label for="inputIsi">Isi Bahasan</label>
+            <input type="text" class="form-control" id="inputIsi" style="min-height: 100px" th:field="*{isiPost}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-</div>
+    <a class="btn btn-danger" href="/forum" role="button">Batal</a></div>
 </body>
 </html>

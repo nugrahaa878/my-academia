@@ -12,11 +12,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
+@RequestMapping(path = "/forum")
+
 public class ForumController {
     @Autowired
     private ForumService forumService;
 
-    @RequestMapping("/forum")
+    @RequestMapping("")
     public String viewHalamanForum(Model model) {
         List<Post> postList = forumService.findAll();
         model.addAttribute("postList", postList);
