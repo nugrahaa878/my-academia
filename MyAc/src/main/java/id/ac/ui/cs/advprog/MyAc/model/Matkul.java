@@ -25,7 +25,7 @@ public class Matkul {
     // TODO: Lengkapi atribut yang sudah anda rencanakan. Ingat bahwa atribut yang dibuat bersifat privat.
     public Matkul(){}
 
-    public Matkul(String kode,String nama, int semester, int sks){
+    public Matkul(String kode, String nama, int semester, int sks){
         this.nama = nama;
         this.kode = kode;
         this.semester = semester;
