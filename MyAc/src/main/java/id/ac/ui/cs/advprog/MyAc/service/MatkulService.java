@@ -7,6 +7,7 @@ import java.util.*;
 public interface MatkulService {
     public List<Matkul> findAll();
     public Optional<Matkul> findMatkul(String kode);
+    public List<Matkul> findMatkulBySemester(int semester);
     public void erase(String kode); //delete
     public Matkul rewrite(Matkul matkul); //update
     public Matkul register(Matkul matkul); //create
