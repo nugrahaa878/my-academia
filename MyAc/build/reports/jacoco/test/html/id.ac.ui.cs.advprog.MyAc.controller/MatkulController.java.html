@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MatkulController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MyAc</a> &gt; <a href="index.source.html" class="el_package">id.ac.ui.cs.advprog.MyAc.controller</a> &gt; <span class="el_source">MatkulController.java</span></div><h1>MatkulController.java</h1><pre class="source lang-java linenums">package id.ac.ui.cs.advprog.MyAc.controller;
+
+import id.ac.ui.cs.advprog.MyAc.model.Matkul;
+import id.ac.ui.cs.advprog.MyAc.service.MatkulService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Optional;
+
+@RestController
+@RequestMapping(path = &quot;/api/matkul&quot;)
+<span class="nc" id="L15">public class MatkulController {</span>
+
+    @Autowired
+    private MatkulService matkulService;
+    
+
+    @GetMapping
+    public ResponseEntity&lt;List&lt;Matkul&gt;&gt; findAll(){
+<span class="nc" id="L23">        return new ResponseEntity&lt;&gt;(matkulService.findAll(),HttpStatus.OK);</span>
+//        return null;
+    }
+
+    @PostMapping
+    public ResponseEntity create(@RequestBody Matkul matkul){
+<span class="nc" id="L29">        matkulService.register(matkul);</span>
+<span class="nc" id="L30">        return new ResponseEntity(HttpStatus.OK);</span>
+//        return null;
+    }
+
+    @GetMapping(&quot;/{kode}&quot;)
+    public ResponseEntity&lt;Matkul&gt; findById(@PathVariable String kode){
+<span class="nc" id="L36">        Optional&lt;Matkul&gt; optionalMatkul = matkulService.findMatkul(kode);</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">        if(optionalMatkul.isEmpty()){</span>
+<span class="nc" id="L38">            return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span>
+        }
+<span class="nc" id="L40">        return new ResponseEntity&lt;Matkul&gt;(optionalMatkul.get(),HttpStatus.OK);</span>
+//        return null;
+    }
+
+    @GetMapping(&quot;/semester/{semester}&quot;)
+    public ResponseEntity&lt;List&lt;Matkul&gt;&gt; findMatkulBySemester(@PathVariable int semester){
+<span class="nc" id="L46">        List&lt;Matkul&gt; listMatkul = matkulService.findMatkulBySemester(semester);</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">        if(listMatkul.isEmpty()){</span>
+<span class="nc" id="L48">            return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span>
+        }
+//        return new ResponseEntity&lt;Matkul&gt;(listMatkul,HttpStatus.OK);
+<span class="nc" id="L51">        return new ResponseEntity(listMatkul, HttpStatus.OK);</span>
+//        return null;
+    }
+
+
+
+//    @PutMapping(&quot;/{kode}&quot;)
+//    public ResponseEntity&lt;Matkul&gt; update(@PathVariable String kode, @RequestBody Matkul matkul){
+//        Optional&lt;Matkul&gt; optionalMatkul = matkulService.findMatkul(kode);
+//        if(optionalMatkul.isEmpty()){
+//            return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);
+//        }
+//        matkul.setId(kode);
+//        return new ResponseEntity&lt;&gt;(matkulService.rewrite(matkul),HttpStatus.OK);
+////        return null;
+//    }
+//
+//    @DeleteMapping(&quot;/{kode}&quot;)
+//    public ResponseEntity delete(@PathVariable String kode){
+//        Optional&lt;Matkul&gt; optionalMatkul = matkulService.findMatkul(kode);
+//        if(optionalSoul.isEmpty()){
+//            return new ResponseEntity(HttpStatus.NOT_FOUND);
+//        }
+//        soulService.erase(id);
+//        return new ResponseEntity(HttpStatus.OK);
+//    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
