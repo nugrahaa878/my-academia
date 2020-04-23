@@ -12,4 +12,6 @@ stages:
 
 test:t1:
   stage: test
-  script: gradle :MyAc:check
+  script:
+    - gradle :MyAc:check
+    - gradle :MyAc:jacocoTestReport
