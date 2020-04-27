@@ -11,7 +11,7 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
-public class ForumServiceImplTest {
+public class PostServiceImplTest {
     @Mock
     private ForumRepository forumRepository;
 
@@ -23,14 +23,14 @@ public class ForumServiceImplTest {
 
     @BeforeEach
     public void setUp() throws Exception {
-        this.post = new Post(1, "judul post", "isi post", "topik matkul");
+        this.post = new Post(1, "post title", "post text", "course topic");
     }
 
     @Test
     public void whenFindAllIsCalledItShouldCallForumRepositoryFindAll() {
-        forumService.findAll();
+        forumService.findAllByOrderByCreateDateDesc();
 
-        verify(forumRepository, times(1)).findAll();
+        verify(forumRepository, times(1)).findAllByOrderByCreateDateDesc();
     }
 
     @Test

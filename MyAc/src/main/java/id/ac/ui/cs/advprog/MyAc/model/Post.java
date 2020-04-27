@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "post")
+@Table(name = "bahasan")
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,7 +29,6 @@ public class Post {
         this.judul = judul;
         this.isiPost = isiPost;
         this.topikMataKuliah = topikMataKuliah;
-
     }
     public  Post(){
     }

@@ -13,7 +13,7 @@
 <div class="container">
     <h1>Membuat Post</h1>
 
-    <form action="#" th:action="@{/simpan}" th:object="${post}" method="post">
+    <form action="#" th:action="@{/forum/simpan}" th:object="${post}" method="post">
         <div class="form-group">
             <label for="inputJudul">Judul</label>
             <input type="text" class="form-control" id="inputJudul" th:field="*{judul}">

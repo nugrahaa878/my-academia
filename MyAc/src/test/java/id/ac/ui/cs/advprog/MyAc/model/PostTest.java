@@ -10,7 +10,7 @@ public class PostTest {
 
     @BeforeEach
     public void setUp() throws Exception {
-        this.post = new Post(1, "judul post", "isi post", "topik matkul");
+        this.post = new Post(1, "post title", "post text", "course topic");
     }
 
     @Test
@@ -19,35 +19,35 @@ public class PostTest {
     }
 
     @Test
-    public void testGetJudul() {
-        assertEquals("judul post", this.post.getJudul());
+    public void testGetTitle() {
+        assertEquals("post title", this.post.getTitle());
     }
 
     @Test
-    public void testGetIsiPost() {
-        assertEquals("isi post", this.post.getIsiPost());
+    public void testGetPostText() {
+        assertEquals("post text", this.post.getPostText());
     }
 
     @Test
-    public void testGetTopikMataKuliah() {
-        assertEquals("topik matkul", this.post.getTopikMataKuliah());
+    public void testGetCourseTopic() {
+        assertEquals("course topic", this.post.getCourseTopic());
     }
 
     @Test
-    public void testSetJudul() {
-        post.setJudul("judul baru");
-        assertEquals("judul baru", post.getJudul());
+    public void testSetTitle() {
+        post.setTitle("new title");
+        assertEquals("new title", post.getTitle());
     }
 
     @Test
-    public void testSetIsiPost() {
-        post.setIsiPost("isi post baru");
-        assertEquals("isi post baru", post.getIsiPost());
+    public void testSetPostText() {
+        post.setPostText("new post text");
+        assertEquals("new post text", post.getPostText());
     }
 
     @Test
-    public void testSetTopikMataKuliah() {
-        post.setTopikMataKuliah("matkul baru");
-        assertEquals("matkul baru", post.getTopikMataKuliah());
+    public void testSetCourseTopic() {
+        post.setCourseTopic("new course");
+        assertEquals("new course", post.getCourseTopic());
     }
 }

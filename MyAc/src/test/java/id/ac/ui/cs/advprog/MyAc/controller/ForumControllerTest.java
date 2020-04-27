@@ -23,15 +23,9 @@ public class ForumControllerTest {
         mockMvc.perform(get("/forum"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.model().attributeExists("postList"))
-                .andExpect(MockMvcResultMatchers.view().name("halamanUtamaForum"));
+                .andExpect(MockMvcResultMatchers.view().name("forumHomePage"));
     }
 
-    @Test
-    public void whenAddUrlIsAccessedItShouldContainNewPost() throws Exception {
-        mockMvc.perform(get("/forum/new"))
-                .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.model().attributeExists("post"))
-                .andExpect(MockMvcResultMatchers.view().name("halamanPostBaru"));
-    }
+
 
 }
