@@ -2,7 +2,7 @@
 
 
 import id.ac.ui.cs.advprog.MyAc.model.Post;
-import id.ac.ui.cs.advprog.MyAc.service.ForumService;
+import id.ac.ui.cs.advprog.MyAc.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,30 +15,14 @@ import java.util.List;
 
 <span class="nc" id="L16">public class ForumController {</span>
     @Autowired
-    private ForumService forumService;
+    private PostService postService;
 
     @RequestMapping(&quot;&quot;)
-    public String viewHalamanForum(Model model) {
-<span class="nc" id="L22">        List&lt;Post&gt; postList = forumService.findAll();</span>
+    public String viewForumPage(Model model) {
+<span class="nc" id="L22">        List&lt;Post&gt; postList = postService.findAll();</span>
 <span class="nc" id="L23">        model.addAttribute(&quot;postList&quot;, postList);</span>
 
-<span class="nc" id="L25">        return &quot;halamanUtamaForum&quot;;</span>
+<span class="nc" id="L25">        return &quot;forumPage&quot;;</span>
     }
-
-    @RequestMapping(&quot;/new&quot;)
-    public String showHalamanPostBaru(Model model) {
-<span class="nc" id="L30">        Post post = new Post();</span>
-<span class="nc" id="L31">        model.addAttribute(&quot;post&quot;, post);</span>
-
-<span class="nc" id="L33">        return &quot;halamanPostBaru&quot;;</span>
-    }
-
-    @RequestMapping(value = &quot;/simpan&quot;, method = RequestMethod.POST)
-    public String simpanPost(@ModelAttribute(&quot;post&quot;) Post post) {
-<span class="nc" id="L38">        forumService.save(post);</span>
-
-<span class="nc" id="L40">        return &quot;redirect:/forum&quot;;</span>
-    }
-
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

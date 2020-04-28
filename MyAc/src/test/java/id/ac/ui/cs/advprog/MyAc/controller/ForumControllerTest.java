@@ -1,6 +1,6 @@
 package id.ac.ui.cs.advprog.MyAc.controller;
 
-import id.ac.ui.cs.advprog.MyAc.service.ForumServiceImpl;
+import id.ac.ui.cs.advprog.MyAc.service.PostServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -16,16 +16,13 @@ public class ForumControllerTest {
     private MockMvc mockMvc;
 
     @MockBean
-    private ForumServiceImpl forumService;
+    private PostServiceImpl forumService;
 
     @Test
     public void whenForumUrlIsAccessedItShouldContainCorrectPostList() throws Exception {
         mockMvc.perform(get("/forum"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.model().attributeExists("postList"))
-                .andExpect(MockMvcResultMatchers.view().name("forumHomePage"));
+                .andExpect(MockMvcResultMatchers.view().name("forumPage"));
     }
-
-
-
 }

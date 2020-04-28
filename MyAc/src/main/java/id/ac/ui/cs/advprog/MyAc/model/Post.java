@@ -1,34 +1,43 @@
 package id.ac.ui.cs.advprog.MyAc.model;
 
+import org.hibernate.annotations.CreationTimestamp;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
-@Table(name = "bahasan")
+@Table(name = "Post")
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "judul")
-    private String judul;
+    @Column(name = "title")
+    private String title;
 
-    @Column(name = "isiPost")
-    private String isiPost;
+    @Column(name = "postText")
+    private String postText;
 
-    @Column(name = "topikMataKuliah")
-    private String topikMataKuliah;
+    @Column(name = "courseTopic")
+    private String courseTopic;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @CreationTimestamp
+    private Date createDate;
 
 
-    public Post(long id, String judul, String isiPost, String topikMataKuliah) {
+    public Post(long id, String title, String postText, String courseTopic, Date createDate) {
         this.id = id;
-        this.judul = judul;
-        this.isiPost = isiPost;
-        this.topikMataKuliah = topikMataKuliah;
+        this.title = title;
+        this.postText = postText;
+        this.courseTopic = courseTopic;
+        this.createDate = createDate;
     }
     public  Post(){
     }
@@ -37,27 +46,32 @@ public class Post {
         return id;
     }
 
-    public String getJudul() {
-        return judul;
+    public String getTitle() {
+        return title;
     }
 
-    public void setJudul(String judul) {
-        this.judul = judul;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getIsiPost() {
-        return isiPost;
+    public String getPostText() {
+        return postText;
     }
 
-    public void setIsiPost(String isiPost) {
-        this.isiPost = isiPost;
+    public void setPostText(String postText) {
+        this.postText = postText;
     }
 
-    public String getTopikMataKuliah() {
-        return topikMataKuliah;
+    public String getCourseTopic() {
+        return courseTopic;
     }
 
-    public void setTopikMataKuliah(String topikMataKuliah) {
-        this.topikMataKuliah = topikMataKuliah;
+    public void setCourseTopic(String courseTopic) {
+        this.courseTopic = courseTopic;
     }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
 }

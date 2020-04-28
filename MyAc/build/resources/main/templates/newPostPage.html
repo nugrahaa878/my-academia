@@ -13,21 +13,21 @@
 <div class="container">
     <h1>Membuat Post</h1>
 
-    <form action="#" th:action="@{/forum/simpan}" th:object="${post}" method="post">
+    <form action="#" th:action="@{/forum/save}" th:object="${post}" method="post">
         <div class="form-group">
-            <label for="inputJudul">Judul</label>
-            <input type="text" class="form-control" id="inputJudul" th:field="*{judul}">
+            <label for="inputJudul">Title</label>
+            <input type="text" class="form-control" id="inputJudul" th:field="*{title}">
         </div>
         <div class="form-group">
-            <label for="inputTopik">Topik Mata Kuliah</label>
-            <input type="text" class="form-control" id="inputTopik" th:field="*{topikMataKuliah}">
+            <label for="inputTopik">The Course Topic</label>
+            <input type="text" class="form-control" id="inputTopik" th:field="*{courseTopic}">
         </div>
         <div class="form-group">
-            <label for="inputIsi">Isi Bahasan</label>
-            <input type="text" class="form-control" id="inputIsi" style="min-height: 100px" th:field="*{isiPost}">
+            <label for="inputIsi">Text</label>
+            <input type="text" class="form-control" id="inputIsi" style="min-height: 100px" th:field="*{postText}">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-    <a class="btn btn-danger" href="/forum" role="button">Batal</a></div>
+    <a class="btn btn-danger" href="/forum" role="button">Back</a></div>
 </body>
 </html>
