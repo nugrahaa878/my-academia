@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Forum diskusi</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/forum.css">
+</head>
+
+<body>
+<div >
+    <div align="center">
+        <h1>Discussion Forum</h1>
+        <a href="/forum/new">New</a>
+        <br/><br/>
+    </div>
+    <div class="container" >
+        <div class="card" th:each="post : ${postList}" style="word-wrap: break-word;">
+            <div class="card-header">
+                <h1><a th:text="${post.title}" th:href="@{'/post/' + ${post.id}}">Title</a></h1>
+                <div><a th:text="${post.courseTopic}">User</a>
+                </div>
+            </div>
+            <h3 class="card-body" th:text="${post.postText}" >Body</h3>
+            <br></br>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript"
+        src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-04-30T07:13:58" hostname="LAPTOP-SJCI920E" time="0.04">
+  <properties/>
+  <testcase name="testGetScore()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.021"/>
+  <testcase name="testGetComponentName()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.017"/>
+  <testcase name="testGetPercentage()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

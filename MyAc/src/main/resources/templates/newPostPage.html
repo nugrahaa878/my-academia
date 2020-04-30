@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Membuat Post baru</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/forum.css">
+</head>
+<body>
+<div class="container">
+    <h1>Membuat Post</h1>
+
+    <form action="#" th:action="@{/forum/save}" th:object="${post}" method="post">
+        <div class="form-group">
+            <label for="inputJudul">Title</label>
+            <input type="text" class="form-control" id="inputJudul" th:field="*{title}">
+        </div>
+        <div class="form-group">
+            <label for="inputTopik">The Course Topic</label>
+            <input type="text" class="form-control" id="inputTopik" th:field="*{courseTopic}">
+        </div>
+        <div class="form-group">
+            <label for="inputIsi">Text</label>
+            <input type="text" class="form-control" id="inputIsi" style="min-height: 100px" th:field="*{postText}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <a class="btn btn-danger" href="/forum" role="button">Back</a></div>
+</body>
+</html>
