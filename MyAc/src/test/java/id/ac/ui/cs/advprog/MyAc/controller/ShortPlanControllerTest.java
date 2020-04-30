@@ -1,7 +1,6 @@
 package id.ac.ui.cs.advprog.MyAc.controller;
 
 import id.ac.ui.cs.advprog.MyAc.model.Component;
-import id.ac.ui.cs.advprog.MyAc.model.ComponentAbstract;
 import id.ac.ui.cs.advprog.MyAc.repository.ShortPlanRepository;
 import id.ac.ui.cs.advprog.MyAc.service.ShortPlanService;
 import org.junit.jupiter.api.Test;
@@ -13,7 +12,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static org.hamcrest.Matchers.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,16 +28,21 @@ public class ShortPlanControllerTest {
     @MockBean
     private ShortPlanService shortPlanService;
 
-    private List<ComponentAbstract> generateComponent() {
-        List<ComponentAbstract> componentList = new ArrayList<ComponentAbstract>();
-        componentList.add(new Component("UAS", 30, 100));
+    private List<Component> generateComponent() {
+        List<Component> componentList = new ArrayList<Component>();
+
+        Component component = new Component();
+        component.setComponentName("UAS");
+        component.setPercentage(30);
+        component.setScore(100);
+        componentList.add(component);
 
         return componentList;
     }
 
     @Test
     public void testWhenComponentListURLIsAccessedItShouldContainCorrectDefaultComponentModel() throws Exception {
-        List<ComponentAbstract> componentList = generateComponent();
+        List<Component> componentList = generateComponent();
 
         mockMvc.perform(get("/short-plan/"))
                 .andExpect(status().isOk());
@@ -52,9 +55,9 @@ public class ShortPlanControllerTest {
         int score = 100;
 
         mockMvc.perform(post("/short-plan/add")
-            .flashAttr("componentName", componentName)
-            .flashAttr("percentage", percentage)
-            .flashAttr("score", score))
+                .flashAttr("componentName", componentName)
+                .flashAttr("percentage", percentage)
+                .flashAttr("score", score))
                 .andExpect(handler().methodName("addComponent"));
     }
 }

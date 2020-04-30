@@ -5,11 +5,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ComponentTest {
-    ComponentAbstract component;
+    Component component;
 
     @BeforeEach
     public void setUp() {
-        this.component = new Component("UAS", 30, 100);
+        component = new Component();
+
+        this.component.setComponentName("UAS");
+        this.component.setPercentage(30);
+        this.component.setScore(100);
     }
 
     @Test
