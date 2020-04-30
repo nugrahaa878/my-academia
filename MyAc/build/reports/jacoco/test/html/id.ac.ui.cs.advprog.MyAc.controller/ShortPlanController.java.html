@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ShortPlanController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MyAc</a> &gt; <a href="index.source.html" class="el_package">id.ac.ui.cs.advprog.MyAc.controller</a> &gt; <span class="el_source">ShortPlanController.java</span></div><h1>ShortPlanController.java</h1><pre class="source lang-java linenums">package id.ac.ui.cs.advprog.MyAc.controller;
 
-import id.ac.ui.cs.advprog.MyAc.model.ComponentAbstract;
+import id.ac.ui.cs.advprog.MyAc.model.Component;
 import id.ac.ui.cs.advprog.MyAc.service.ShortPlanService;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping(path = &quot;/short-plan&quot;)
 public class ShortPlanController {
     private final ShortPlanService shortPlanService;
 
-<span class="fc" id="L14">    public ShortPlanController(ShortPlanService shortPlanService) {this.shortPlanService = shortPlanService;}</span>
+<span class="fc" id="L15">    public ShortPlanController(ShortPlanService shortPlanService) {this.shortPlanService = shortPlanService;}</span>
 
     @GetMapping(path = &quot;/&quot;)
     public String shortPlan(Model model) {
-<span class="fc" id="L18">        List&lt;ComponentAbstract&gt; componentList = shortPlanService.getComponentList();</span>
-<span class="fc" id="L19">        model.addAttribute(&quot;componentList&quot;, componentList);</span>
-<span class="fc" id="L20">        return&quot;ShortPlan/short-plan&quot;;</span>
+<span class="fc" id="L19">        List&lt;Component&gt; componentList = shortPlanService.getComponentList();</span>
+<span class="fc" id="L20">        double finalScore = shortPlanService.getFinalScore();</span>
+<span class="fc" id="L21">        String grade = shortPlanService.getGrade();</span>
+
+<span class="fc" id="L23">        model.addAttribute(&quot;componentList&quot;, componentList);</span>
+<span class="fc" id="L24">        model.addAttribute(&quot;component&quot;, new Component());</span>
+<span class="fc" id="L25">        model.addAttribute(&quot;score&quot;, finalScore);</span>
+<span class="fc" id="L26">        model.addAttribute(&quot;grade&quot;, grade);</span>
+<span class="fc" id="L27">        return &quot;short-plan&quot;;</span>
     }
 
     @RequestMapping(value = &quot;/add&quot;, method = RequestMethod.POST)
-    public String addComponent(@ModelAttribute(&quot;componentName&quot;) String componentName,
-                               @ModelAttribute(&quot;percentage&quot;) int percentage,
-                               @ModelAttribute(&quot;score&quot;) int score) {
-
-<span class="fc" id="L28">        shortPlanService.addComponent(componentName, percentage, score);</span>
-<span class="fc" id="L29">        return &quot;redirect:/short-plan/&quot;;</span>
+    public String addComponent(@ModelAttribute(&quot;component&quot;) Component component) {
+<span class="fc" id="L32">        shortPlanService.addComponent(component);</span>
+<span class="fc" id="L33">        shortPlanService.addFinalScore(component);</span>
+<span class="fc" id="L34">        return &quot;redirect:/short-plan/&quot;;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

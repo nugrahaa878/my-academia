@@ -1,28 +1,31 @@
 package id.ac.ui.cs.advprog.MyAc.model;
 
-public class Component extends ComponentAbstract {
+public class Component {
 
     private String componentName;
     private int percentage;
     private int score;
 
-    public Component(String componentName, int percentage, int score) {
+    public void setComponentName(String componentName) {
         this.componentName = componentName;
+    }
+
+    public void setPercentage(int percentage) {
         this.percentage = percentage;
+    }
+
+    public void setScore(int score) {
         this.score = score;
     }
 
-    @Override
     public String getComponentName() {
         return this.componentName;
     }
 
-    @Override
     public int getPercentage() {
         return this.percentage;
     }
 
-    @Override
     public int getScore() {
         return this.score;
     }

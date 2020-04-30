@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Component.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MyAc</a> &gt; <a href="index.source.html" class="el_package">id.ac.ui.cs.advprog.MyAc.model</a> &gt; <span class="el_source">Component.java</span></div><h1>Component.java</h1><pre class="source lang-java linenums">package id.ac.ui.cs.advprog.MyAc.model;
 
-public class Component extends ComponentAbstract {
+<span class="fc" id="L3">public class Component {</span>
 
     private String componentName;
     private int percentage;
     private int score;
 
-<span class="fc" id="L9">    public Component(String componentName, int percentage, int score) {</span>
+    public void setComponentName(String componentName) {
 <span class="fc" id="L10">        this.componentName = componentName;</span>
-<span class="fc" id="L11">        this.percentage = percentage;</span>
-<span class="fc" id="L12">        this.score = score;</span>
-<span class="fc" id="L13">    }</span>
+<span class="fc" id="L11">    }</span>
 
-    @Override
+    public void setPercentage(int percentage) {
+<span class="fc" id="L14">        this.percentage = percentage;</span>
+<span class="fc" id="L15">    }</span>
+
+    public void setScore(int score) {
+<span class="fc" id="L18">        this.score = score;</span>
+<span class="fc" id="L19">    }</span>
+
     public String getComponentName() {
-<span class="fc" id="L17">        return this.componentName;</span>
+<span class="fc" id="L22">        return this.componentName;</span>
     }
 
-    @Override
     public int getPercentage() {
-<span class="fc" id="L22">        return this.percentage;</span>
+<span class="fc" id="L26">        return this.percentage;</span>
     }
 
-    @Override
     public int getScore() {
-<span class="fc" id="L27">        return this.score;</span>
+<span class="fc" id="L30">        return this.score;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

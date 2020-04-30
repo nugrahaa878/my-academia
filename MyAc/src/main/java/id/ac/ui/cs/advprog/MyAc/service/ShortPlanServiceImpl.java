@@ -1,6 +1,6 @@
 package id.ac.ui.cs.advprog.MyAc.service;
 
-import id.ac.ui.cs.advprog.MyAc.model.ComponentAbstract;
+import id.ac.ui.cs.advprog.MyAc.model.Component;
 import id.ac.ui.cs.advprog.MyAc.repository.ShortPlanRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -14,12 +14,27 @@ public class ShortPlanServiceImpl implements ShortPlanService {
     }
 
     @Override
-    public void addComponent(String componentName, int percentage, int score) {
-        this.shortPlanRepository.addComponent(componentName, percentage, score);
+    public void addComponent(Component component) {
+        this.shortPlanRepository.addComponent(component);
     }
 
     @Override
-    public List<ComponentAbstract> getComponentList() {
+    public void addFinalScore(Component component) {
+        this.shortPlanRepository.addFinalScore(component);
+    }
+
+    @Override
+    public String getGrade() {
+        return this.shortPlanRepository.getGrade();
+    }
+
+    @Override
+    public double getFinalScore() {
+        return this.shortPlanRepository.getFinalScore();
+    }
+
+    @Override
+    public List<Component> getComponentList() {
         return shortPlanRepository.getComponentList();
     }
 }
