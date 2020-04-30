@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="id.ac.ui.cs.advprog.MyAc.service.MatkulServiceImplTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-04-23T08:14:15" hostname="LAPTOP-930TCP7M" time="2.047">
+  <properties/>
+  <testcase name="whenGetIsCalledItShouldCallMatkulRepositoryFindById()" classname="id.ac.ui.cs.advprog.MyAc.service.MatkulServiceImplTest" time="2.033"/>
+  <testcase name="whenFindAllIsCalledItShouldCallMatkulRepositoryFindAll()" classname="id.ac.ui.cs.advprog.MyAc.service.MatkulServiceImplTest" time="0.006"/>
+  <testcase name="whenGetIsCalledItShouldCallMatkulRepositoryFindBySemester()" classname="id.ac.ui.cs.advprog.MyAc.service.MatkulServiceImplTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

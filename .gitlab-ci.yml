@@ -9,7 +9,9 @@ before_script:
 stages:
   - test
 
-# Tutorial 1 CI Jobs
+
 test:t1:
   stage: test
-  script: gradle :MyAc:check
+  script:
+    - gradle :MyAc:check
+    - gradle :MyAc:jacocoTestReport
