@@ -16,6 +16,7 @@ import javax.persistence.TemporalType;
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "post_id")
     private long id;
 
     @Column(name = "title")
@@ -29,6 +30,7 @@ public class Post {
 
     @Temporal(TemporalType.TIMESTAMP)
     @CreationTimestamp
+    @Column(name = "create_date")
     private Date createDate;
 
 
