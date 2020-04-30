@@ -18,17 +18,37 @@ public class LongPlan {
     @Column(name = "kodeUser")
     private int kodeUser;
 
-    @Column(name = "nama")
-    private String nama;
-
-    @Column(name = "semesterPlan")
-    private ArrayList<Long> semesterPlan;
+    @Column(name = "namaLongPlan")
+    private String namaLongPlan;
 
     public LongPlan(){}
 
-    public LongPlan(int kodeUser, String nama){
+    public LongPlan(int kodeUser, String namaLongPlan){
         this.kodeUser = kodeUser;
-        this.nama = nama;
+        this.namaLongPlan = namaLongPlan;
     }
 
+    public Long getId(){
+        return this.id;
+    }
+
+    public int getKodeUser(){
+        return this.kodeUser;
+    }
+
+    public String getNamaLongPlan(){
+        return this.namaLongPlan;
+    }
+
+    public void setId(Long id){
+        this.id = id;
+    }
+
+    public void setKodeUser(int kodeUser) {
+        this.kodeUser = kodeUser;
+    }
+
+    public void setNamaLongPlan(String namaLongPlan) {
+        this.namaLongPlan = namaLongPlan;
+    }
 }

@@ -15,15 +15,40 @@ public class SemesterPlan {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "idLong")
+    private Long idLong;
+
     @Column(name = "semester")
     private int semester ;
 
-    @Column(name = "matkul")
-    private ArrayList<String> matkul;
-
     public SemesterPlan(){}
 
-    public SemesterPlan(int semester){
+    public SemesterPlan(Long idLong, int semester){
+        this.idLong = idLong;
+        this.semester = semester;
+    }
+
+    public Long getId(){
+        return this.id;
+    }
+
+    public Long getIdLong(){
+        return this.idLong;
+    }
+
+    public int getSemester(){
+        return this.semester;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setIdLong(Long idLong) {
+        this.idLong = idLong;
+    }
+
+    public void setSemester(int semester) {
         this.semester = semester;
     }
 }
