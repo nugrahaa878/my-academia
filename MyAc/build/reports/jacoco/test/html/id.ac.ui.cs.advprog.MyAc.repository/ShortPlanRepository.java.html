@@ -6,36 +6,36 @@ import java.util.List;
 import java.util.ArrayList;
 
 @Repository
-<span class="fc" id="L9">public class ShortPlanRepository {</span>
-<span class="fc" id="L10">    private List&lt;Component&gt; componentList = new ArrayList&lt;Component&gt;();</span>
+<span class="nc" id="L9">public class ShortPlanRepository {</span>
+<span class="nc" id="L10">    private List&lt;Component&gt; componentList = new ArrayList&lt;Component&gt;();</span>
     private double finalScore;
 
     public List&lt;Component&gt; getComponentList() {
-<span class="fc" id="L14">        return this.componentList;</span>
+<span class="nc" id="L14">        return this.componentList;</span>
     }
 
     public void addComponent(Component component) {
-<span class="fc" id="L18">        this.componentList.add(component);</span>
-<span class="fc" id="L19">    }</span>
+<span class="nc" id="L18">        this.componentList.add(component);</span>
+<span class="nc" id="L19">    }</span>
 
     public void addFinalScore(Component component) {
-<span class="fc" id="L22">        this.finalScore = this.finalScore + (component.getPercentage() * component.getScore())/100.0;</span>
-<span class="fc" id="L23">    }</span>
+<span class="nc" id="L22">        this.finalScore = this.finalScore + (component.getPercentage() * component.getScore())/100.0;</span>
+<span class="nc" id="L23">    }</span>
 
     public double getFinalScore() {
-<span class="fc" id="L26">        return this.finalScore;</span>
+<span class="nc" id="L26">        return this.finalScore;</span>
     }
 
     public String getGrade() {
-<span class="fc bfc" id="L30" title="All 2 branches covered.">        if (this.finalScore &gt;= 85) return &quot;A&quot;;</span>
-<span class="fc bfc" id="L31" title="All 2 branches covered.">        if (this.finalScore &gt;= 80) return &quot;A-&quot;;</span>
-<span class="fc bfc" id="L32" title="All 2 branches covered.">        if (this.finalScore &gt;= 75) return &quot;B+&quot;;</span>
-<span class="fc bfc" id="L33" title="All 2 branches covered.">        if (this.finalScore &gt;= 70) return &quot;B&quot;;</span>
-<span class="fc bfc" id="L34" title="All 2 branches covered.">        if (this.finalScore &gt;= 65) return &quot;B-&quot;;</span>
-<span class="fc bfc" id="L35" title="All 2 branches covered.">        if (this.finalScore &gt;= 60) return &quot;C+&quot;;</span>
-<span class="fc bfc" id="L36" title="All 2 branches covered.">        if (this.finalScore &gt;= 55) return &quot;C&quot;;</span>
-<span class="fc bfc" id="L37" title="All 2 branches covered.">        if (this.finalScore &gt;= 40) return &quot;D&quot;;</span>
-<span class="fc" id="L38">        return &quot;E&quot;;</span>
+<span class="nc bnc" id="L30" title="All 2 branches missed.">        if (this.finalScore &gt;= 85) return &quot;A&quot;;</span>
+<span class="nc bnc" id="L31" title="All 2 branches missed.">        if (this.finalScore &gt;= 80) return &quot;A-&quot;;</span>
+<span class="nc bnc" id="L32" title="All 2 branches missed.">        if (this.finalScore &gt;= 75) return &quot;B+&quot;;</span>
+<span class="nc bnc" id="L33" title="All 2 branches missed.">        if (this.finalScore &gt;= 70) return &quot;B&quot;;</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">        if (this.finalScore &gt;= 65) return &quot;B-&quot;;</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">        if (this.finalScore &gt;= 60) return &quot;C+&quot;;</span>
+<span class="nc bnc" id="L36" title="All 2 branches missed.">        if (this.finalScore &gt;= 55) return &quot;C&quot;;</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">        if (this.finalScore &gt;= 40) return &quot;D&quot;;</span>
+<span class="nc" id="L38">        return &quot;E&quot;;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
