@@ -10,20 +10,20 @@ import java.util.Optional;
 
 // TODO: Import service bean
 @Service
-<span class="fc" id="L13">public class MatkulServiceImpl implements MatkulService {</span>
+<span class="nc" id="L13">public class MatkulServiceImpl implements MatkulService {</span>
     // TODO: implementasi semua method di MatkulService.java. Coba lihat dokumentasi JpaRepository untuk mengimplementasikan Service
 
     @Autowired
     private MatkulRepository matkulRepository;
 
     public List&lt;Matkul&gt; findAll(){
-<span class="fc" id="L20">        return matkulRepository.findAll();</span>
+<span class="nc" id="L20">        return matkulRepository.findAll();</span>
     }
     public Optional&lt;Matkul&gt; findMatkul(String kode){
-<span class="fc" id="L23">        return matkulRepository.findById(kode);</span>
+<span class="nc" id="L23">        return matkulRepository.findById(kode);</span>
     }
     public List&lt;Matkul&gt; findMatkulBySemester(int semester){
-<span class="fc" id="L26">        return matkulRepository.findMatkulBySemester(semester);</span>
+<span class="nc" id="L26">        return matkulRepository.findMatkulBySemester(semester);</span>
     }
     public void erase(String kode){ //delete
 <span class="nc" id="L29">        matkulRepository.deleteById(kode);</span>

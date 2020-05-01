@@ -12,26 +12,26 @@ import java.util.List;
 public class ShortPlanController {
     private final ShortPlanService shortPlanService;
 
-<span class="fc" id="L15">    public ShortPlanController(ShortPlanService shortPlanService) {this.shortPlanService = shortPlanService;}</span>
+<span class="nc" id="L15">    public ShortPlanController(ShortPlanService shortPlanService) {this.shortPlanService = shortPlanService;}</span>
 
     @GetMapping(path = &quot;/&quot;)
     public String shortPlan(Model model) {
-<span class="fc" id="L19">        List&lt;Component&gt; componentList = shortPlanService.getComponentList();</span>
-<span class="fc" id="L20">        double finalScore = shortPlanService.getFinalScore();</span>
-<span class="fc" id="L21">        String grade = shortPlanService.getGrade();</span>
+<span class="nc" id="L19">        List&lt;Component&gt; componentList = shortPlanService.getComponentList();</span>
+<span class="nc" id="L20">        double finalScore = shortPlanService.getFinalScore();</span>
+<span class="nc" id="L21">        String grade = shortPlanService.getGrade();</span>
 
-<span class="fc" id="L23">        model.addAttribute(&quot;componentList&quot;, componentList);</span>
-<span class="fc" id="L24">        model.addAttribute(&quot;component&quot;, new Component());</span>
-<span class="fc" id="L25">        model.addAttribute(&quot;score&quot;, finalScore);</span>
-<span class="fc" id="L26">        model.addAttribute(&quot;grade&quot;, grade);</span>
-<span class="fc" id="L27">        return &quot;short-plan&quot;;</span>
+<span class="nc" id="L23">        model.addAttribute(&quot;componentList&quot;, componentList);</span>
+<span class="nc" id="L24">        model.addAttribute(&quot;component&quot;, new Component());</span>
+<span class="nc" id="L25">        model.addAttribute(&quot;score&quot;, finalScore);</span>
+<span class="nc" id="L26">        model.addAttribute(&quot;grade&quot;, grade);</span>
+<span class="nc" id="L27">        return &quot;short-plan&quot;;</span>
     }
 
     @RequestMapping(value = &quot;/add&quot;, method = RequestMethod.POST)
     public String addComponent(@ModelAttribute(&quot;component&quot;) Component component) {
-<span class="fc" id="L32">        shortPlanService.addComponent(component);</span>
-<span class="fc" id="L33">        shortPlanService.addFinalScore(component);</span>
-<span class="fc" id="L34">        return &quot;redirect:/short-plan/&quot;;</span>
+<span class="nc" id="L32">        shortPlanService.addComponent(component);</span>
+<span class="nc" id="L33">        shortPlanService.addFinalScore(component);</span>
+<span class="nc" id="L34">        return &quot;redirect:/short-plan/&quot;;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
