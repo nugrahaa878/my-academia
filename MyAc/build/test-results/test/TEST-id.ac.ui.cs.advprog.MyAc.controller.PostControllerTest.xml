@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="id.ac.ui.cs.advprog.MyAc.controller.PostControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-01T06:59:25" hostname="DESKTOP-VVI2B95" time="0.211">
+  <properties/>
+  <testcase name="whenAddUrlIsAccessedItShouldContainNewPost()" classname="id.ac.ui.cs.advprog.MyAc.controller.PostControllerTest" time="0.211"/>
+  <system-out><![CDATA[2020-04-30 23:59:24.808  INFO 4740 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [id.ac.ui.cs.advprog.MyAc.controller.PostControllerTest], using SpringBootContextLoader
+2020-04-30 23:59:24.809  INFO 4740 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [id.ac.ui.cs.advprog.MyAc.controller.PostControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-04-30 23:59:24.809  INFO 4740 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [id.ac.ui.cs.advprog.MyAc.controller.PostControllerTest]: PostControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-04-30 23:59:24.812  INFO 4740 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration id.ac.ui.cs.advprog.MyAc.MyAcApplication for test class id.ac.ui.cs.advprog.MyAc.controller.PostControllerTest
+2020-04-30 23:59:24.813  INFO 4740 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-04-30 23:59:24.813  INFO 4740 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@35adbd5b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1a560fa8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@614436d8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2cca4eb7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@74d57910, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5ed4036d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1ee61c99, org.springframework.test.context.event.EventPublishingTestExecutionListener@60a75604, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3fe5aef9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@41541d03, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6f78d364, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@35b5aff9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@27b55dd0]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.4.RELEASE)
+
+2020-04-30 23:59:24.837  INFO 4740 --- [    Test worker] i.a.u.c.a.M.c.PostControllerTest         : Starting PostControllerTest on DESKTOP-VVI2B95 with PID 4740 (started by USER in D:\Project\myacademy fix\myacademy\MyAc)
+2020-04-30 23:59:24.839  INFO 4740 --- [    Test worker] i.a.u.c.a.M.c.PostControllerTest         : No active profile set, falling back to default profiles: default
+2020-04-30 23:59:25.163  INFO 4740 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-30 23:59:25.309  INFO 4740 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-04-30 23:59:25.310  INFO 4740 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-04-30 23:59:25.318  INFO 4740 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 8 ms
+2020-04-30 23:59:25.330  INFO 4740 --- [    Test worker] i.a.u.c.a.M.c.PostControllerTest         : Started PostControllerTest in 0.513 seconds (JVM running for 6.421)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
