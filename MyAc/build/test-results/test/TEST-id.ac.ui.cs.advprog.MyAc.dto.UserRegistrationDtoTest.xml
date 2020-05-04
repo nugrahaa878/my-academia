@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-01T09:05:44" hostname="DESKTOP-VVI2B95" time="0.064">
+<testsuite name="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-04T06:50:51" hostname="DESKTOP-VVI2B95" time="0.013">
   <properties/>
-  <testcase name="testSetFirstName()" classname="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" time="0.064"/>
+  <testcase name="testSetFirstName()" classname="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" time="0.013"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

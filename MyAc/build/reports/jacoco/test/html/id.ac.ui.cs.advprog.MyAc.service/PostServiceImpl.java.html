@@ -10,24 +10,24 @@ import java.util.Optional;
 @SuppressWarnings(&quot;checkstyle:WhitespaceAround&quot;)
 @Service
 @Transactional
-<span class="nc" id="L13">public class PostServiceImpl implements PostService {</span>
+<span class="fc" id="L13">public class PostServiceImpl implements PostService {</span>
     @Autowired
     private PostRepository repo;
 
     public List&lt;Post&gt; findAll() {
-<span class="nc" id="L18">        return repo.findAll();</span>
+<span class="fc" id="L18">        return repo.findAll();</span>
     }
 
     public void save(Post post) {
-<span class="nc" id="L22">        repo.save(post);</span>
-<span class="nc" id="L23">    }</span>
+<span class="fc" id="L22">        repo.save(post);</span>
+<span class="fc" id="L23">    }</span>
 
     public Optional&lt;Post&gt; get(long id) {
-<span class="nc" id="L26">        return repo.findById(id);</span>
+<span class="fc" id="L26">        return repo.findById(id);</span>
     }
 
     public void delete(long id) {
-<span class="nc" id="L30">        repo.deleteById(id);</span>
-<span class="nc" id="L31">    }</span>
+<span class="fc" id="L30">        repo.deleteById(id);</span>
+<span class="fc" id="L31">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
