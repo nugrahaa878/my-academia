@@ -1,6 +1,7 @@
 package id.ac.ui.cs.advprog.MyAc.controller;
 
 import id.ac.ui.cs.advprog.MyAc.service.PostServiceImpl;
+import id.ac.ui.cs.advprog.MyAc.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -18,6 +19,9 @@ public class ForumControllerTest {
 
     @MockBean
     private PostServiceImpl forumService;
+
+    @MockBean
+    private UserService userService;
 
     @WithMockUser(value = "spring")
     @Test

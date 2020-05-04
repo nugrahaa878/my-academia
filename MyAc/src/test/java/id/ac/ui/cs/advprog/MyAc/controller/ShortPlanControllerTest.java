@@ -3,6 +3,7 @@ package id.ac.ui.cs.advprog.MyAc.controller;
 import id.ac.ui.cs.advprog.MyAc.model.Component;
 import id.ac.ui.cs.advprog.MyAc.repository.ShortPlanRepository;
 import id.ac.ui.cs.advprog.MyAc.service.ShortPlanService;
+import id.ac.ui.cs.advprog.MyAc.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -29,6 +30,9 @@ public class ShortPlanControllerTest {
 
     @MockBean
     private ShortPlanService shortPlanService;
+
+    @MockBean
+    private UserService userService;
 
     private List<Component> generateComponent() {
         List<Component> componentList = new ArrayList<Component>();
