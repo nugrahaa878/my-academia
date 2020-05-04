@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - MainControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>MainControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/id.ac.ui.cs.advprog.MyAc.controller.html">id.ac.ui.cs.advprog.MyAc.controller</a> &gt; MainControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.225s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">whenIndexUrlAccessedShouldReturnIndexPage()</td>
+<td class="success">0.013s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">whenLoginUrlAccessedShouldReturnLoginPage()</td>
+<td class="success">0.212s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2020-05-04 07:10:56.892  INFO 17164 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest], using SpringBootContextLoader
+2020-05-04 07:10:56.893  INFO 17164 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-05-04 07:10:56.894  INFO 17164 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest]: MainControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-05-04 07:10:56.900  INFO 17164 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration id.ac.ui.cs.advprog.MyAc.MyAcApplication for test class id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest
+2020-05-04 07:10:56.901  INFO 17164 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-05-04 07:10:56.902  INFO 17164 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d49176f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@58c2b44, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4b52718c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@d9d6c3f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@58bae08c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3c0836d4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@648efec8, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@2149af2, org.springframework.test.context.event.EventPublishingTestExecutionListener@d25a4bc, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@70e69d5a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@638d4530, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@45e890b9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6548dcfc, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@21808142, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@28ade487]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.4.RELEASE)
+
+2020-05-04 07:10:56.948  INFO 17164 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : Starting MainControllerTest on DESKTOP-VVI2B95 with PID 17164 (started by USER in D:\Project\myacademy fix\myacademy\MyAc)
+2020-05-04 07:10:56.951  INFO 17164 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : No active profile set, falling back to default profiles: default
+2020-05-04 07:10:57.352  INFO 17164 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c73195b, org.springframework.security.web.context.SecurityContextPersistenceFilter@5cc0be46, org.springframework.security.web.header.HeaderWriterFilter@59edd3c3, org.springframework.security.web.csrf.CsrfFilter@4cb2daf1, org.springframework.security.web.authentication.logout.LogoutFilter@d17aae6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7af805ec, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1974ddb2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2eb06694, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b84db06, org.springframework.security.web.session.SessionManagementFilter@67f992a, org.springframework.security.web.access.ExceptionTranslationFilter@347e31f5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17dc0141]
+2020-05-04 07:10:57.513  INFO 17164 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-04 07:10:57.555  INFO 17164 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-04 07:10:57.764  INFO 17164 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-05-04 07:10:57.764  INFO 17164 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-05-04 07:10:57.773  INFO 17164 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 9 ms
+2020-05-04 07:10:57.809  INFO 17164 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : Started MainControllerTest in 0.897 seconds (JVM running for 8.014)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 5.2.1</a> at May 4, 2020, 7:11:00 AM</p>
+</div>
+</div>
+</body>
+</html>
