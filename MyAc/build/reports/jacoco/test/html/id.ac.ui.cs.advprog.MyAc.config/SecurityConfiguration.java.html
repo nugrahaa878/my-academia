@@ -25,41 +25,40 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 <span class="fc" id="L25">                .authorizeRequests()</span>
 <span class="fc" id="L26">                .antMatchers(</span>
                         &quot;/registration**&quot;,
-                        &quot;/**&quot;,
                         &quot;/js/**&quot;,
                         &quot;/css/**&quot;,
                         &quot;/img/**&quot;,
-<span class="fc" id="L32">                        &quot;/webjars/**&quot;).permitAll()</span>
-<span class="fc" id="L33">                .anyRequest().authenticated()</span>
-<span class="fc" id="L34">                .and()</span>
-<span class="fc" id="L35">                .formLogin()</span>
-<span class="fc" id="L36">                .loginPage(&quot;/login&quot;)</span>
-<span class="fc" id="L37">                .permitAll()</span>
-<span class="fc" id="L38">                .and()</span>
-<span class="fc" id="L39">                .logout()</span>
-<span class="fc" id="L40">                .invalidateHttpSession(true)</span>
-<span class="fc" id="L41">                .clearAuthentication(true)</span>
-<span class="fc" id="L42">                .logoutRequestMatcher(new AntPathRequestMatcher(&quot;/logout&quot;))</span>
-<span class="fc" id="L43">                .logoutSuccessUrl(&quot;/login?logout&quot;)</span>
-<span class="fc" id="L44">                .permitAll();</span>
-<span class="fc" id="L45">    }</span>
+<span class="fc" id="L31">                        &quot;/webjars/**&quot;).permitAll()</span>
+<span class="fc" id="L32">                .anyRequest().authenticated()</span>
+<span class="fc" id="L33">                .and()</span>
+<span class="fc" id="L34">                .formLogin()</span>
+<span class="fc" id="L35">                .loginPage(&quot;/login&quot;)</span>
+<span class="fc" id="L36">                .permitAll()</span>
+<span class="fc" id="L37">                .and()</span>
+<span class="fc" id="L38">                .logout()</span>
+<span class="fc" id="L39">                .invalidateHttpSession(true)</span>
+<span class="fc" id="L40">                .clearAuthentication(true)</span>
+<span class="fc" id="L41">                .logoutRequestMatcher(new AntPathRequestMatcher(&quot;/logout&quot;))</span>
+<span class="fc" id="L42">                .logoutSuccessUrl(&quot;/login?logout&quot;)</span>
+<span class="fc" id="L43">                .permitAll();</span>
+<span class="fc" id="L44">    }</span>
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
-<span class="fc" id="L49">        return new BCryptPasswordEncoder();</span>
+<span class="fc" id="L48">        return new BCryptPasswordEncoder();</span>
     }
 
     @Bean
     public DaoAuthenticationProvider authenticationProvider() {
-<span class="fc" id="L54">        DaoAuthenticationProvider auth = new DaoAuthenticationProvider();</span>
-<span class="fc" id="L55">        auth.setUserDetailsService(userService);</span>
-<span class="fc" id="L56">        auth.setPasswordEncoder(passwordEncoder());</span>
-<span class="fc" id="L57">        return auth;</span>
+<span class="fc" id="L53">        DaoAuthenticationProvider auth = new DaoAuthenticationProvider();</span>
+<span class="fc" id="L54">        auth.setUserDetailsService(userService);</span>
+<span class="fc" id="L55">        auth.setPasswordEncoder(passwordEncoder());</span>
+<span class="fc" id="L56">        return auth;</span>
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-<span class="fc" id="L62">        auth.authenticationProvider(authenticationProvider());</span>
-<span class="fc" id="L63">    }</span>
+<span class="fc" id="L61">        auth.authenticationProvider(authenticationProvider());</span>
+<span class="fc" id="L62">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

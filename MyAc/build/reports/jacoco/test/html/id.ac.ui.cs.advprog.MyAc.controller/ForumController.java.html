@@ -13,16 +13,16 @@ import java.util.List;
 @Controller
 @RequestMapping(path = &quot;/forum&quot;)
 
-<span class="fc" id="L16">public class ForumController {</span>
+<span class="nc" id="L16">public class ForumController {</span>
     @Autowired
     private PostService postService;
 
     @RequestMapping(&quot;&quot;)
     public String viewForumPage(Model model) {
-<span class="fc" id="L22">        List&lt;Post&gt; postList = postService.findAll();</span>
-<span class="fc" id="L23">        model.addAttribute(&quot;postList&quot;, postList);</span>
+<span class="nc" id="L22">        List&lt;Post&gt; postList = postService.findAll();</span>
+<span class="nc" id="L23">        model.addAttribute(&quot;postList&quot;, postList);</span>
 
-<span class="fc" id="L25">        return &quot;forumPage&quot;;</span>
+<span class="nc" id="L25">        return &quot;forumPage&quot;;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

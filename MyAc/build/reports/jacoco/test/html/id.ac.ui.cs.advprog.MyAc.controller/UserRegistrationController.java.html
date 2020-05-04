@@ -16,19 +16,19 @@ import javax.validation.Valid;
 
 @Controller
 @RequestMapping(&quot;/registration&quot;)
-<span class="nc" id="L19">public class UserRegistrationController {</span>
+<span class="fc" id="L19">public class UserRegistrationController {</span>
 
     @Autowired
     private UserService userService;
 
     @ModelAttribute(&quot;user&quot;)
     public UserRegistrationDto userRegistrationDto() {
-<span class="nc" id="L26">        return new UserRegistrationDto();</span>
+<span class="fc" id="L26">        return new UserRegistrationDto();</span>
     }
 
     @GetMapping
     public String showRegistrationForm(Model model) {
-<span class="nc" id="L31">        return &quot;registration&quot;;</span>
+<span class="fc" id="L31">        return &quot;registration&quot;;</span>
     }
 
     @PostMapping

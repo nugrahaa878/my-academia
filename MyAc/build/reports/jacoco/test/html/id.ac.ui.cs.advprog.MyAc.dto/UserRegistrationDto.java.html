@@ -11,7 +11,7 @@ import javax.validation.constraints.NotEmpty;
         @FieldMatch(first = &quot;email&quot;, second = &quot;confirmEmail&quot;, message = &quot;The email fields must match&quot;)
 })
 
-<span class="nc" id="L14">public class UserRegistrationDto {</span>
+<span class="fc" id="L14">public class UserRegistrationDto {</span>
 
     @NotEmpty
     private String firstName;
@@ -37,7 +37,7 @@ import javax.validation.constraints.NotEmpty;
     private Boolean terms;
 
     public String getFirstName() {
-<span class="nc" id="L40">        return firstName;</span>
+<span class="fc" id="L40">        return firstName;</span>
     }
 
     public void setFirstName(String firstName) {
@@ -45,7 +45,7 @@ import javax.validation.constraints.NotEmpty;
 <span class="nc" id="L45">    }</span>
 
     public String getLastName() {
-<span class="nc" id="L48">        return lastName;</span>
+<span class="fc" id="L48">        return lastName;</span>
     }
 
     public void setLastName(String lastName) {
@@ -53,7 +53,7 @@ import javax.validation.constraints.NotEmpty;
 <span class="nc" id="L53">    }</span>
 
     public String getPassword() {
-<span class="nc" id="L56">        return password;</span>
+<span class="fc" id="L56">        return password;</span>
     }
 
     public void setPassword(String password) {
@@ -61,7 +61,7 @@ import javax.validation.constraints.NotEmpty;
 <span class="nc" id="L61">    }</span>
 
     public String getConfirmPassword() {
-<span class="nc" id="L64">        return confirmPassword;</span>
+<span class="fc" id="L64">        return confirmPassword;</span>
     }
 
     public void setConfirmPassword(String confirmPassword) {
@@ -69,7 +69,7 @@ import javax.validation.constraints.NotEmpty;
 <span class="nc" id="L69">    }</span>
 
     public String getEmail() {
-<span class="nc" id="L72">        return email;</span>
+<span class="fc" id="L72">        return email;</span>
     }
 
     public void setEmail(String email) {
@@ -77,7 +77,7 @@ import javax.validation.constraints.NotEmpty;
 <span class="nc" id="L77">    }</span>
 
     public String getConfirmEmail() {
-<span class="nc" id="L80">        return confirmEmail;</span>
+<span class="fc" id="L80">        return confirmEmail;</span>
     }
 
     public void setConfirmEmail(String confirmEmail) {
@@ -85,7 +85,7 @@ import javax.validation.constraints.NotEmpty;
 <span class="nc" id="L85">    }</span>
 
     public Boolean getTerms() {
-<span class="nc" id="L88">        return terms;</span>
+<span class="fc" id="L88">        return terms;</span>
     }
 
     public void setTerms(Boolean terms) {
