@@ -9,16 +9,16 @@ public class MainController {
 
     @GetMapping("/")
     public String root() {
-        return null;
+        return "index";
     }
 
     @GetMapping("/login")
     public String login(Model model) {
-        return null;
+        return "login";
     }
 
     @GetMapping("/user")
     public String userIndex() {
-        return "null";
+        return "user/index";
     }
 }
