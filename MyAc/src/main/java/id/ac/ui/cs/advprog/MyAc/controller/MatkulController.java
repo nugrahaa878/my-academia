@@ -32,11 +32,25 @@ public class MatkulController {
     @GetMapping("/{kode}")
     public ResponseEntity<Matkul> findById(@PathVariable String kode){
         Optional<Matkul> optionalMatkul = matkulService.findMatkul(kode);
-        if(optionalMatkul.isEmpty()){
+
+        if(!optionalMatkul.isPresent()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<Matkul>(optionalMatkul.get(),HttpStatus.OK);
     }
+
+    @GetMapping("/semester/{semester}")
+    public ResponseEntity<List<Matkul>> findMatkulBySemester(@PathVariable int semester){
+        List<Matkul> listMatkul = matkulService.findMatkulBySemester(semester);
+        if(listMatkul.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+//        return new ResponseEntity<Matkul>(listMatkul,HttpStatus.OK);
+        return new ResponseEntity(listMatkul, HttpStatus.OK);
+//        return null;
+    }
+
+
 
 //    @PutMapping("/{kode}")
 //    public ResponseEntity<Matkul> update(@PathVariable String kode, @RequestBody Matkul matkul){

@@ -22,6 +22,9 @@ public class MatkulServiceImpl implements MatkulService {
     public Optional<Matkul> findMatkul(String kode){
         return matkulRepository.findById(kode);
     }
+    public List<Matkul> findMatkulBySemester(int semester){
+        return matkulRepository.findMatkulBySemester(semester);
+    }
     public void erase(String kode){ //delete
         matkulRepository.deleteById(kode);
     }

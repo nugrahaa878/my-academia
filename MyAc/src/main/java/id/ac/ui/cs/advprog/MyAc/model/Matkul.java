@@ -23,7 +23,8 @@ public class Matkul {
     private int sks;
 
     // TODO: Lengkapi atribut yang sudah anda rencanakan. Ingat bahwa atribut yang dibuat bersifat privat.
-    public Matkul(){}
+    public Matkul(){
+    }
 
     public Matkul(String kode, String nama, int semester, int sks){
         this.nama = nama;
