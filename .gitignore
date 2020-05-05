@@ -397,11 +397,9 @@ MigrationBackup/
 .ionide/
 
 ### Gradle template
-.gradle
 /build/
 
 # Ignore Gradle GUI config
-gradle-app.setting
 
 # Cache of project
 .gradletasknamecache
