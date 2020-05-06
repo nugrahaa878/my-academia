@@ -4,12 +4,42 @@ variables:
   GRADLE_OPTS: "-Dorg.gradle.daemon=false"
 
 before_script:
+  - echo "Mudah mudahan lancar"
+  - echo `pwd`
   - export GRADLE_USER_HOME=`pwd`/.gradle
+  - rm -f  .gradle/caches/modules-2/modules-2.lock
+  - rm -fr .gradle/caches/*/plugin-resolution/
 
 stages:
+  - build
   - test
+  - deploy
 
-# Tutorial 1 CI Jobs
-test:t1:
+Build:
+  stage: build
+  script:
+    - gradle build
+
+Test:
   stage: test
-  script: gradle :MyAc:check
+  script:
+    - gradle :MyAc:check
+    - gradle :MyAc:jacocoTestReport
+
+Production:
+  image: ruby:2.4
+  stage: deploy
+  before_script:
+    - gem install dpl
+    - wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+  script:
+    - dpl --provider=heroku --app=$HEROKU_APPNAME --api-key=$HEROKU_APIKEY
+    - export HEROKU_API_KEY=$HEROKU_APIKEY
+    - heroku run --app $HEROKU_APPNAME migrate
+  environment:
+    name: production
+    url: $HEROKU_APP_HOST
+
+
+after_script:
+  - echo "Mantab jiwa"

@@ -47,6 +47,8 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
     implementation('org.postgresql:postgresql')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    testImplementation 'org.springframework.security:spring-security-test'
 
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -57,8 +59,12 @@ dependencies {
     compile 'org.webjars:jquery:3.4.1'
     compile 'org.webjars:bootstrap:4.4.1'
     compile 'org.webjars:popper.js:1.16.0'
+    compile 'commons-beanutils:commons-beanutils:1.9.4'
 }
 
 test {
     useJUnitPlatform()
 }
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
