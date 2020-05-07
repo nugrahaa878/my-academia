@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Add Quest</title>
+    <title>Short Plan</title>
     <link rel="stylesheet" href="/webjars/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
@@ -14,7 +14,6 @@
                 <!--ToDo: Complete me-->
                 <form th:action="@{/short-plan/add}" th:object="${component}" method="post">
                     <div class="form-group">
-                        <!--ToDo: Complete me-->
                         <input type="text" class="form-control" th:field="*{componentName}" id="componentName" placeholder="Component Name">
                         <input type="text" class="form-control" th:field="*{percentage}" id="percentage" placeholder="Percentage">
                         <input type="text" class="form-control" th:field="*{score}" id="score" placeholder="Score">
@@ -23,13 +22,28 @@
                 </form>
             </div>
         </div>
+
         <div class="row">
-            <h1>Final Score : </h1>
-            <h1 class="mb-4" th:text="${score}">"\n"</h1>
+            <div class="col-md-4 p-3" th:each="component: ${componentList}">
+                <div class="card text-center text-dark">
+                    <div class="card-body p-4">
+                        <!--ToDo: Complete me-->
+                        <ul class="pl-3 text-left">
+                            <li th:text="'Nama : ' + ${component.getComponentName()}"></li>
+                            <li th:text="'Bobot : ' + ${component.getPercentage()} + ' %'"></li>
+                            <li th:text="'Nilai : ' + ${component.getScore()}"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="row">
-            <h1>Grade : </h1>
-            <h1 class="mb-4" th:text="${grade}"></h1>
+            <h2>Final Score : </h2>
+            <h2 class="mb-4" th:text="${score}">"\n"</h2>
+        </div>
+        <div class="row">
+            <h2>Grade : </h2>
+            <h2 class="mb-4" th:text="${grade}"></h2>
         </div>
     </div>
 </div>
