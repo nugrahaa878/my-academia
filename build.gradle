@@ -31,3 +31,4 @@ subprojects {
         testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: junit5_jupiter_version
     }
 }
+
