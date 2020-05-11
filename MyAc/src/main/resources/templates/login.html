@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <h1>Login page</h1>
-            <form th:action="@{/login}" method="post">
+            <form th:action="@{/login}" method="post" th:onsubmit="">
                 <div th:if="${param.error}">
                     <div class="alert alert-danger">Invalid username or password.
                     </div>
@@ -32,7 +32,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3">
-                            <input type="submit" name="login-submit" id="login-submit" class="form-control btn btn-primary" value="Log In" />
+                            <input type="submit" name="login-submit" id="login-submit" class="form-control btn btn-primary" value="Log In" th:href="@{/home}" th:onsubmit=""/>
                         </div>
                     </div>
                 </div>
