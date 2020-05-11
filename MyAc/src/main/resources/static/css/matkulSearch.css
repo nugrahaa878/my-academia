@@ -1,0 +1,47 @@
+#myac {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43.4915px;
+    line-height: 51px;
+    color: #000000;
+}
+
+.butPage{
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17.9965px;
+    line-height: 21px;
+}
+
+.current{
+    color: #F5E06C;
+}
+
+.butPage:hover{
+    position: relative;
+    text-decoration: none;
+    color: #F5E06C;
+}
+
+#inputMatkul{
+    background: #FFFFFF;
+    border: 2.24956px solid #F5E06C;
+    box-sizing: border-box;
+    border-radius: 37.4927px;
+}
+
+#inputSelect{
+    background: #FFFFFF;
+    border: 2.24956px solid #F5E06C;
+    box-sizing: border-box;
+    border-radius: 37.4927px;
+}
+
+.searchbtn{
+    background: #F5E06C;
+    border: 2.24956px solid #F5E06C;
+    box-sizing: border-box;
+    border-radius: 37.4927px;
+}

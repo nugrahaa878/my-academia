@@ -5,24 +5,35 @@ import id.ac.ui.cs.advprog.MyAc.service.MatkulService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
-@RestController
+@Controller
 @RequestMapping(path = "/api/matkul")
 public class MatkulController {
 
     @Autowired
     private MatkulService matkulService;
+
+    @RequestMapping
+    public String matkulHome(Model model) {
+        List<Matkul> matkulALl = matkulService.findAll();
+        model.addAttribute("matkulALl", matkulALl);
+        return "matkulSearch";
+    }
     
 
-    @GetMapping
-    public ResponseEntity<List<Matkul>> findAll(){
-        return new ResponseEntity<>(matkulService.findAll(),HttpStatus.OK);
-//        return null;
-    }
+//    @GetMapping
+//    public ResponseEntity<List<Matkul>> findAll(){
+//        return new ResponseEntity<>(matkulService.findAll(),HttpStatus.OK);
+////        return null;
+//    }
+
+
 
     @PostMapping
     public ResponseEntity create(@RequestBody Matkul matkul){
