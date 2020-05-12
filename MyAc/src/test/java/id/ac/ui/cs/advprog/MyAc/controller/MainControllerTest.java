@@ -35,6 +35,14 @@ public class MainControllerTest {
     public void whenIndexUrlAccessedShouldReturnIndexPage() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.view().name("welcome"));
+    }
+
+    @WithMockUser(username = "spring")
+    @Test
+    public void whenHomeUrlAccessedShouldReturnHomePage() throws Exception {
+        mockMvc.perform(get("/home"))
+                .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.view().name("index"));
     }
 }

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
     @GetMapping(&quot;/&quot;)
     public String root() {
-<span class="fc" id="L12">        return &quot;index&quot;;</span>
+<span class="fc" id="L12">        return &quot;welcome&quot;;</span>
     }
 
     @GetMapping(&quot;/login&quot;)
@@ -21,5 +21,11 @@ import org.springframework.web.bind.annotation.GetMapping;
     public String userIndex() {
 <span class="nc" id="L22">        return &quot;user/index&quot;;</span>
     }
+
+    @GetMapping(&quot;/home&quot;)
+    public String home() {
+<span class="fc" id="L27">        return &quot;index&quot;;</span>
+    }
+
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
