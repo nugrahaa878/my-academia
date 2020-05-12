@@ -7,29 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" th:href="@{img/rektorat-flat-removebg.png}" type="image/x-icon">
 
-    <title>Registration</title>
+    <title>MyAcademia - Home</title>
 </head>
 
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
 
-<br>
-<br>
 <div class="container">
-    <h2>Jolan tru!</h2>
-
+    <h2 style="margin-top: 50px">Jolan tru!</h2>
     <p>
         Welcome <span sec:authentication="principal.username">User</span>
     </p>
+    <a th:href="@{/logout}" sec:authorize="isAuthenticated()">Logout</a>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
