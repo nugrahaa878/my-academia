@@ -73,7 +73,6 @@ public class PostController {
             Post post = optionalPost.get();
                 postService.delete(post);
                 return "redirect:/forum";
-
     }
 }
 
