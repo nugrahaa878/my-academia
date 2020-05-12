@@ -22,16 +22,19 @@ import java.util.Optional;
     public Optional&lt;Matkul&gt; findMatkul(String kode){
 <span class="nc" id="L23">        return matkulRepository.findById(kode);</span>
     }
+    public List&lt;Matkul&gt; findMatkulBySemester(int semester){
+<span class="nc" id="L26">        return matkulRepository.findMatkulBySemester(semester);</span>
+    }
     public void erase(String kode){ //delete
-<span class="nc" id="L26">        matkulRepository.deleteById(kode);</span>
-<span class="nc" id="L27">    }</span>
+<span class="nc" id="L29">        matkulRepository.deleteById(kode);</span>
+<span class="nc" id="L30">    }</span>
     public Matkul rewrite(Matkul matkul) { //update
-<span class="nc" id="L29">        matkulRepository.save(matkul);</span>
-<span class="nc" id="L30">        return matkul;</span>
+<span class="nc" id="L32">        matkulRepository.save(matkul);</span>
+<span class="nc" id="L33">        return matkul;</span>
     }
     public Matkul register(Matkul matkul) {//create
-<span class="nc" id="L33">        matkulRepository.save(matkul);</span>
-<span class="nc" id="L34">        return matkul;</span>
+<span class="nc" id="L36">        matkulRepository.save(matkul);</span>
+<span class="nc" id="L37">        return matkul;</span>
     }
 }
 
