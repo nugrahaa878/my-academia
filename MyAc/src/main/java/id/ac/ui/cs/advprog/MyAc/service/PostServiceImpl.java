@@ -22,11 +22,11 @@ public class PostServiceImpl implements PostService {
         repo.save(post);
     }
 
-    public Optional<Post> get(long id) {
+    public Optional<Post> findById(long id) {
         return repo.findById(id);
     }
 
-    public void delete(long id) {
-        repo.deleteById(id);
+    public void delete(Post post) {
+        repo.delete(post);
     }
 }

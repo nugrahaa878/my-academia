@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="utf-8"/>
+    <title>Forum diskusi</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/forum.css">
+</head>
+<body>
+
+<div class="container">
+    <!--Post-->
+    <div class="jumbotron">
+
+        <h1 th:text="${post.title}">Title</h1>
+        <h3 th:text="${post.postText}">Text</h3>
+
+        <!--Only show these buttons if the user is the owner of post-->
+            <div class="row">
+                <a th:href="@{'/forum/editPost/{id}'(id=${post.id})}" class="col-md-2">
+                    <button type="button" class="btn btn-primary btn-block" th:text="Edit">Edit</button>
+                </a>
+                <a th:href="@{'/forum/delete/{id}'(id=${post.id})}" class="col-md-2">
+                    <button type="button" class="btn btn-danger btn-block" th:text="Delete">Delete</button>
+                </a>
+            </div>
+    </div>
+</div>
+
+</body>
+</html>
