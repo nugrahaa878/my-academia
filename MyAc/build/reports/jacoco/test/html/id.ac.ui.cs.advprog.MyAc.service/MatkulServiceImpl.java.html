@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MatkulServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MyAc</a> &gt; <a href="index.source.html" class="el_package">id.ac.ui.cs.advprog.MyAc.service</a> &gt; <span class="el_source">MatkulServiceImpl.java</span></div><h1>MatkulServiceImpl.java</h1><pre class="source lang-java linenums">package id.ac.ui.cs.advprog.MyAc.service;
+
+import id.ac.ui.cs.advprog.MyAc.model.Matkul;
+import id.ac.ui.cs.advprog.MyAc.repository.MatkulRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+// TODO: Import service bean
+@Service
+<span class="fc" id="L13">public class MatkulServiceImpl implements MatkulService {</span>
+    // TODO: implementasi semua method di MatkulService.java. Coba lihat dokumentasi JpaRepository untuk mengimplementasikan Service
+
+    @Autowired
+    private MatkulRepository matkulRepository;
+
+    public List&lt;Matkul&gt; findAll(){
+<span class="fc" id="L20">        return matkulRepository.findAll();</span>
+    }
+    public Optional&lt;Matkul&gt; findMatkul(String kode){
+<span class="fc" id="L23">        return matkulRepository.findById(kode);</span>
+    }
+    public List&lt;Matkul&gt; findMatkulBySemester(int semester){
+<span class="fc" id="L26">        return matkulRepository.findMatkulBySemester(semester);</span>
+    }
+    public void erase(String kode){ //delete
+<span class="nc" id="L29">        matkulRepository.deleteById(kode);</span>
+<span class="nc" id="L30">    }</span>
+    public Matkul rewrite(Matkul matkul) { //update
+<span class="nc" id="L32">        matkulRepository.save(matkul);</span>
+<span class="nc" id="L33">        return matkul;</span>
+    }
+    public Matkul register(Matkul matkul) {//create
+<span class="nc" id="L36">        matkulRepository.save(matkul);</span>
+<span class="nc" id="L37">        return matkul;</span>
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

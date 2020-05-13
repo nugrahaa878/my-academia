@@ -110,7 +110,6 @@ public class LongPlanController {
     @PutMapping("/semesterplan/matkulplan/{id}")
     public ResponseEntity<MatkulPlan> updateMatkul(@PathVariable Long id, @RequestBody MatkulPlan matkulPlan){
         Optional<MatkulPlan> optionalMatkulPlan = matkulPlanService.findMatkulPlan(id);
-        Optional<MatkulPlan> optionalMatkulPlan = matkulPlanService.findMatkulPlan(id);
         if(!optionalMatkulPlan.isPresent()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

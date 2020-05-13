@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-05-13T13:50:47" hostname="LAPTOP-82VCQFF9" time="0.32">
+  <properties/>
+  <testcase name="whenSaveIsCalledItShouldCallForumRepositorySave()" classname="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" time="0.29"/>
+  <testcase name="whenGetIsCalledItShouldCallForumRepositoryFindById()" classname="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" time="0.003"/>
+  <testcase name="whenFindAllIsCalledItShouldCallForumRepositoryFindAll()" classname="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" time="0.012"/>
+  <testcase name="whenDeleteIsCalledItShouldCallForumRepositoryDeleteById()" classname="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
