@@ -26,7 +26,7 @@ public class Matkul {
     public Matkul(){
     }
 
-    public Matkul(String kode,String nama, int semester, int sks){
+    public Matkul(String kode, String nama, int semester, int sks){
         this.nama = nama;
         this.kode = kode;
         this.semester = semester;

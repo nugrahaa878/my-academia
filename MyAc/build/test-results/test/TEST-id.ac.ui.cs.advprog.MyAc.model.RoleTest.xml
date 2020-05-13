@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="id.ac.ui.cs.advprog.MyAc.model.RoleTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-05-12T06:44:23" hostname="DESKTOP-VVI2B95" time="0.003">
   <properties/>
   <testcase name="testGetName()" classname="id.ac.ui.cs.advprog.MyAc.model.RoleTest" time="0.001"/>
   <testcase name="testSetName()" classname="id.ac.ui.cs.advprog.MyAc.model.RoleTest" time="0.001"/>
+=======
+<testsuite name="id.ac.ui.cs.advprog.MyAc.model.RoleTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-05-13T13:50:46" hostname="LAPTOP-82VCQFF9" time="0.01">
+  <properties/>
+  <testcase name="testGetName()" classname="id.ac.ui.cs.advprog.MyAc.model.RoleTest" time="0.002"/>
+  <testcase name="testSetName()" classname="id.ac.ui.cs.advprog.MyAc.model.RoleTest" time="0.004"/>
+>>>>>>> ali
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

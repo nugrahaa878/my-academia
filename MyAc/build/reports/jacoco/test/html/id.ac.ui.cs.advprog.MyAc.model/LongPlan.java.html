@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LongPlan.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MyAc</a> &gt; <a href="index.source.html" class="el_package">id.ac.ui.cs.advprog.MyAc.model</a> &gt; <span class="el_source">LongPlan.java</span></div><h1>LongPlan.java</h1><pre class="source lang-java linenums">package id.ac.ui.cs.advprog.MyAc.model;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.util.ArrayList;
+
+@Entity
+@Table(name = &quot;longPlan&quot;)
+public class LongPlan {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = &quot;id&quot;)
+    private Long id;
+
+    @Column(name = &quot;kodeUser&quot;)
+    private int kodeUser;
+
+    @Column(name = &quot;namaLongPlan&quot;)
+    private String namaLongPlan;
+
+<span class="nc" id="L24">    public LongPlan(){}</span>
+
+<span class="nc" id="L26">    public LongPlan(int kodeUser, String namaLongPlan){</span>
+<span class="nc" id="L27">        this.kodeUser = kodeUser;</span>
+<span class="nc" id="L28">        this.namaLongPlan = namaLongPlan;</span>
+<span class="nc" id="L29">    }</span>
+
+    public Long getId(){
+<span class="nc" id="L32">        return this.id;</span>
+    }
+
+    public int getKodeUser(){
+<span class="nc" id="L36">        return this.kodeUser;</span>
+    }
+
+    public String getNamaLongPlan(){
+<span class="nc" id="L40">        return this.namaLongPlan;</span>
+    }
+
+    public void setId(Long id){
+<span class="nc" id="L44">        this.id = id;</span>
+<span class="nc" id="L45">    }</span>
+
+    public void setKodeUser(int kodeUser) {
+<span class="nc" id="L48">        this.kodeUser = kodeUser;</span>
+<span class="nc" id="L49">    }</span>
+
+    public void setNamaLongPlan(String namaLongPlan) {
+<span class="nc" id="L52">        this.namaLongPlan = namaLongPlan;</span>
+<span class="nc" id="L53">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

@@ -21,14 +21,12 @@ public class MatkulController {
     @GetMapping
     public ResponseEntity<List<Matkul>> findAll(){
         return new ResponseEntity<>(matkulService.findAll(),HttpStatus.OK);
-//        return null;
     }
 
     @PostMapping
     public ResponseEntity create(@RequestBody Matkul matkul){
         matkulService.register(matkul);
         return new ResponseEntity(HttpStatus.OK);
-//        return null;
     }
 
     @GetMapping("/{kode}")
@@ -39,7 +37,6 @@ public class MatkulController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<Matkul>(optionalMatkul.get(),HttpStatus.OK);
-//        return null;
     }
 
     @GetMapping("/semester/{semester}")
@@ -63,16 +60,15 @@ public class MatkulController {
 //        }
 //        matkul.setId(kode);
 //        return new ResponseEntity<>(matkulService.rewrite(matkul),HttpStatus.OK);
-////        return null;
 //    }
 //
 //    @DeleteMapping("/{kode}")
 //    public ResponseEntity delete(@PathVariable String kode){
 //        Optional<Matkul> optionalMatkul = matkulService.findMatkul(kode);
-//        if(optionalSoul.isEmpty()){
+//        if(optionalMatkul.isEmpty()){
 //            return new ResponseEntity(HttpStatus.NOT_FOUND);
 //        }
-//        soulService.erase(id);
+//        matkulService.erase(kode);
 //        return new ResponseEntity(HttpStatus.OK);
 //    }
 

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="id.ac.ui.cs.advprog.MyAc.model.PostTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-05-12T06:44:23" hostname="DESKTOP-VVI2B95" time="0.014">
   <properties/>
   <testcase name="testGetPostText()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.001"/>
@@ -8,6 +9,17 @@
   <testcase name="testGetId()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.001"/>
   <testcase name="testSetCourseTopic()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.001"/>
   <testcase name="testSetPostText()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.001"/>
+=======
+<testsuite name="id.ac.ui.cs.advprog.MyAc.model.PostTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-05-13T13:50:45" hostname="LAPTOP-82VCQFF9" time="0.045">
+  <properties/>
+  <testcase name="testGetPostText()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.008"/>
+  <testcase name="testGetCourseTopic()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.002"/>
+  <testcase name="testGetTitle()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.001"/>
+  <testcase name="testGetCreateDate()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.001"/>
+  <testcase name="testGetId()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.008"/>
+  <testcase name="testSetCourseTopic()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.002"/>
+  <testcase name="testSetPostText()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.005"/>
+>>>>>>> ali
   <testcase name="testSetTitle()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

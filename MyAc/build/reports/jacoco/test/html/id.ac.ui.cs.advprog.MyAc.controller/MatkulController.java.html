@@ -21,35 +21,32 @@ import java.util.Optional;
     @GetMapping
     public ResponseEntity&lt;List&lt;Matkul&gt;&gt; findAll(){
 <span class="nc" id="L23">        return new ResponseEntity&lt;&gt;(matkulService.findAll(),HttpStatus.OK);</span>
-//        return null;
     }
 
     @PostMapping
     public ResponseEntity create(@RequestBody Matkul matkul){
-<span class="nc" id="L29">        matkulService.register(matkul);</span>
-<span class="nc" id="L30">        return new ResponseEntity(HttpStatus.OK);</span>
-//        return null;
+<span class="nc" id="L28">        matkulService.register(matkul);</span>
+<span class="nc" id="L29">        return new ResponseEntity(HttpStatus.OK);</span>
     }
 
     @GetMapping(&quot;/{kode}&quot;)
     public ResponseEntity&lt;Matkul&gt; findById(@PathVariable String kode){
-<span class="nc" id="L36">        Optional&lt;Matkul&gt; optionalMatkul = matkulService.findMatkul(kode);</span>
+<span class="nc" id="L34">        Optional&lt;Matkul&gt; optionalMatkul = matkulService.findMatkul(kode);</span>
 
-<span class="nc bnc" id="L38" title="All 2 branches missed.">        if(!optionalMatkul.isPresent()){</span>
-<span class="nc" id="L39">            return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span>
+<span class="nc bnc" id="L36" title="All 2 branches missed.">        if(!optionalMatkul.isPresent()){</span>
+<span class="nc" id="L37">            return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span>
         }
-<span class="nc" id="L41">        return new ResponseEntity&lt;Matkul&gt;(optionalMatkul.get(),HttpStatus.OK);</span>
-//        return null;
+<span class="nc" id="L39">        return new ResponseEntity&lt;Matkul&gt;(optionalMatkul.get(),HttpStatus.OK);</span>
     }
 
     @GetMapping(&quot;/semester/{semester}&quot;)
     public ResponseEntity&lt;List&lt;Matkul&gt;&gt; findMatkulBySemester(@PathVariable int semester){
-<span class="nc" id="L47">        List&lt;Matkul&gt; listMatkul = matkulService.findMatkulBySemester(semester);</span>
-<span class="nc bnc" id="L48" title="All 2 branches missed.">        if(listMatkul.isEmpty()){</span>
-<span class="nc" id="L49">            return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span>
+<span class="nc" id="L44">        List&lt;Matkul&gt; listMatkul = matkulService.findMatkulBySemester(semester);</span>
+<span class="nc bnc" id="L45" title="All 2 branches missed.">        if(listMatkul.isEmpty()){</span>
+<span class="nc" id="L46">            return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span>
         }
 //        return new ResponseEntity&lt;Matkul&gt;(listMatkul,HttpStatus.OK);
-<span class="nc" id="L52">        return new ResponseEntity(listMatkul, HttpStatus.OK);</span>
+<span class="nc" id="L49">        return new ResponseEntity(listMatkul, HttpStatus.OK);</span>
 //        return null;
     }
 
@@ -63,16 +60,15 @@ import java.util.Optional;
 //        }
 //        matkul.setId(kode);
 //        return new ResponseEntity&lt;&gt;(matkulService.rewrite(matkul),HttpStatus.OK);
-////        return null;
 //    }
 //
 //    @DeleteMapping(&quot;/{kode}&quot;)
 //    public ResponseEntity delete(@PathVariable String kode){
 //        Optional&lt;Matkul&gt; optionalMatkul = matkulService.findMatkul(kode);
-//        if(optionalSoul.isEmpty()){
+//        if(optionalMatkul.isEmpty()){
 //            return new ResponseEntity(HttpStatus.NOT_FOUND);
 //        }
-//        soulService.erase(id);
+//        matkulService.erase(kode);
 //        return new ResponseEntity(HttpStatus.OK);
 //    }
 
