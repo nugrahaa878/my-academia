@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testsuite name="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-05-12T06:44:23" hostname="DESKTOP-VVI2B95" time="0.109">
+<testsuite name="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-05-13T14:59:01" hostname="LAPTOP-82VCQFF9" time="0.542">
   <properties/>
-  <testcase name="whenSaveIsCalledItShouldCallForumRepositorySave()" classname="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" time="0.092"/>
-  <testcase name="whenGetIsCalledItShouldCallForumRepositoryFindById()" classname="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" time="0.004"/>
-  <testcase name="whenFindAllIsCalledItShouldCallForumRepositoryFindAll()" classname="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" time="0.003"/>
-  <testcase name="whenDeleteIsCalledItShouldCallForumRepositoryDeleteById()" classname="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" time="0.006"/>
-=======
-<testsuite name="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-05-13T13:50:47" hostname="LAPTOP-82VCQFF9" time="0.32">
-  <properties/>
-  <testcase name="whenSaveIsCalledItShouldCallForumRepositorySave()" classname="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" time="0.29"/>
-  <testcase name="whenGetIsCalledItShouldCallForumRepositoryFindById()" classname="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" time="0.003"/>
-  <testcase name="whenFindAllIsCalledItShouldCallForumRepositoryFindAll()" classname="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" time="0.012"/>
-  <testcase name="whenDeleteIsCalledItShouldCallForumRepositoryDeleteById()" classname="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" time="0.008"/>
->>>>>>> ali
+  <testcase name="whenSaveIsCalledItShouldCallForumRepositorySave()" classname="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" time="0.443"/>
+  <testcase name="whenGetIsCalledItShouldCallForumRepositoryFindById()" classname="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" time="0.008"/>
+  <testcase name="whenFindAllIsCalledItShouldCallForumRepositoryFindAll()" classname="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" time="0.037"/>
+  <testcase name="whenDeleteIsCalledItShouldCallForumRepositoryDeleteById()" classname="id.ac.ui.cs.advprog.MyAc.service.PostServiceImplTest" time="0.02"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

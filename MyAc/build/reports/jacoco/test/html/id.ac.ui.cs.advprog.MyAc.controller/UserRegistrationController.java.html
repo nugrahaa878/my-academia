@@ -39,12 +39,20 @@ import javax.validation.Valid;
 <span class="nc" id="L39">            result.rejectValue(&quot;email&quot;, null, &quot;There is already an account registered with that email&quot;);</span>
         }
 
-<span class="nc bnc" id="L42" title="All 2 branches missed.">        if (result.hasErrors()) {</span>
-<span class="nc" id="L43">            return &quot;registration&quot;;</span>
+<span class="nc bnc" id="L42" title="All 2 branches missed.">        if (!userDto.getEmail().equals(userDto.getConfirmEmail()) ) {</span>
+<span class="nc" id="L43">            result.rejectValue(&quot;confirmEmail&quot;, null, &quot;Email didnt match&quot;);</span>
         }
 
-<span class="nc" id="L46">        userService.save(userDto);</span>
-<span class="nc" id="L47">        return &quot;redirect:/registration?success&quot;;</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">        if (!userDto.getPassword().equals(userDto.getConfirmPassword())) {</span>
+<span class="nc" id="L47">            result.rejectValue(&quot;confirmPassword&quot;, null, &quot;Password didnt match&quot;);</span>
+        }
+
+<span class="nc bnc" id="L50" title="All 2 branches missed.">        if (result.hasErrors()) {</span>
+<span class="nc" id="L51">            return &quot;registration&quot;;</span>
+        }
+
+<span class="nc" id="L54">        userService.save(userDto);</span>
+<span class="nc" id="L55">        return &quot;redirect:/registration?success&quot;;</span>
     }
 
 }

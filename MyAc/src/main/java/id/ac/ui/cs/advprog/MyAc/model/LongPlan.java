@@ -16,14 +16,14 @@ public class LongPlan {
     private Long id;
 
     @Column(name = "kodeUser")
-    private int kodeUser;
+    private Long kodeUser;
 
     @Column(name = "namaLongPlan")
     private String namaLongPlan;
 
     public LongPlan(){}
 
-    public LongPlan(int kodeUser, String namaLongPlan){
+    public LongPlan(Long kodeUser, String namaLongPlan){
         this.kodeUser = kodeUser;
         this.namaLongPlan = namaLongPlan;
     }
@@ -32,7 +32,7 @@ public class LongPlan {
         return this.id;
     }
 
-    public int getKodeUser(){
+    public Long getKodeUser(){
         return this.kodeUser;
     }
 
@@ -44,7 +44,7 @@ public class LongPlan {
         this.id = id;
     }
 
-    public void setKodeUser(int kodeUser) {
+    public void setKodeUser(Long kodeUser) {
         this.kodeUser = kodeUser;
     }
 

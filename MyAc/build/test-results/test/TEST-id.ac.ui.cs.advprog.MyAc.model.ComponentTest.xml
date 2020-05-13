@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testsuite name="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-05-12T06:44:23" hostname="DESKTOP-VVI2B95" time="0.007">
+<testsuite name="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-05-13T14:58:58" hostname="LAPTOP-82VCQFF9" time="0.149">
   <properties/>
-  <testcase name="testGetScore()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.002"/>
-  <testcase name="testGetComponentName()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.001"/>
-  <testcase name="testGetPercentage()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.002"/>
-=======
-<testsuite name="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-05-13T13:50:45" hostname="LAPTOP-82VCQFF9" time="0.047">
-  <properties/>
-  <testcase name="testGetScore()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.006"/>
-  <testcase name="testGetComponentName()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.026"/>
-  <testcase name="testGetPercentage()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.008"/>
->>>>>>> ali
+  <testcase name="testGetScore()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.008"/>
+  <testcase name="testGetComponentName()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.011"/>
+  <testcase name="testGetPercentage()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.01"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
