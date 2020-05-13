@@ -63,7 +63,7 @@ public class LongPlanController {
     @GetMapping("/{id}")
     public ResponseEntity<LongPlan> findById(@PathVariable Long id){
         Optional<LongPlan> optionalLongPlan = longPlanService.findLongPlan(id);
-        if(optionalLongPlan.isEmpty()){
+        if(!optionalLongPlan.isPresent()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<LongPlan>(optionalLongPlan.get(),HttpStatus.OK);
@@ -72,7 +72,7 @@ public class LongPlanController {
     @GetMapping("/semesterplan/{id}")
     public ResponseEntity<SemesterPlan> findByIdSemester(@PathVariable Long id){
         Optional<SemesterPlan> optionalSemesterPlan = semesterPlanService.findSemesterPlan(id);
-        if(optionalSemesterPlan.isEmpty()){
+        if(!optionalSemesterPlan.isPresent()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<SemesterPlan>(optionalSemesterPlan.get(),HttpStatus.OK);
@@ -81,7 +81,7 @@ public class LongPlanController {
     @GetMapping("/semesterplan/matkulplan/{id}")
     public ResponseEntity<MatkulPlan> findByIdMatkul(@PathVariable Long id){
         Optional<MatkulPlan> optionalMatkulPlan = matkulPlanService.findMatkulPlan(id);
-        if(optionalMatkulPlan.isEmpty()){
+        if(!optionalMatkulPlan.isPresent()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<MatkulPlan>(optionalMatkulPlan.get(),HttpStatus.OK);
@@ -90,7 +90,7 @@ public class LongPlanController {
     @PutMapping("/{id}")
     public ResponseEntity<LongPlan> update(@PathVariable Long id, @RequestBody LongPlan longPlan){
         Optional<LongPlan> optionalLongPlan = longPlanService.findLongPlan(id);
-        if(optionalLongPlan.isEmpty()){
+        if(!optionalLongPlan.isPresent()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         longPlan.setId(id);
@@ -100,7 +100,7 @@ public class LongPlanController {
     @PutMapping("/semesterplan/{id}")
     public ResponseEntity<SemesterPlan> updateSemester(@PathVariable Long id, @RequestBody SemesterPlan semesterPlan){
         Optional<SemesterPlan> optionalSemesterPlan = semesterPlanService.findSemesterPlan(id);
-        if(optionalSemesterPlan.isEmpty()){
+        if(!optionalSemesterPlan.isPresent()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         semesterPlan.setId(id);
@@ -110,7 +110,8 @@ public class LongPlanController {
     @PutMapping("/semesterplan/matkulplan/{id}")
     public ResponseEntity<MatkulPlan> updateMatkul(@PathVariable Long id, @RequestBody MatkulPlan matkulPlan){
         Optional<MatkulPlan> optionalMatkulPlan = matkulPlanService.findMatkulPlan(id);
-        if(optionalMatkulPlan.isEmpty()){
+        Optional<MatkulPlan> optionalMatkulPlan = matkulPlanService.findMatkulPlan(id);
+        if(!optionalMatkulPlan.isPresent()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         matkulPlan.setId(id);
@@ -120,7 +121,7 @@ public class LongPlanController {
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable Long id){
         Optional<LongPlan> optionalLongPlan = longPlanService.findLongPlan(id);
-        if(optionalLongPlan.isEmpty()){
+        if(!optionalLongPlan.isPresent()){
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
         longPlanService.erase(id);
@@ -130,7 +131,7 @@ public class LongPlanController {
     @DeleteMapping("/semesterplan/{id}")
     public ResponseEntity deleteSemester(@PathVariable Long id){
         Optional<SemesterPlan> optionalSemesterPlan = semesterPlanService.findSemesterPlan(id);
-        if(optionalSemesterPlan.isEmpty()){
+        if(!optionalSemesterPlan.isPresent()){
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
         semesterPlanService.erase(id);
@@ -140,7 +141,7 @@ public class LongPlanController {
     @DeleteMapping("/semesterplan/matkulplan/{id}")
     public ResponseEntity deleteMatkul(@PathVariable Long id){
         Optional<MatkulPlan> optionalMatkulPlan = matkulPlanService.findMatkulPlan(id);
-        if(optionalMatkulPlan.isEmpty()){
+        if(!optionalMatkulPlan.isPresent()){
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
         matkulPlanService.erase(id);

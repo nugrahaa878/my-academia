@@ -32,7 +32,7 @@ public class MatkulController {
     @GetMapping("/{kode}")
     public ResponseEntity<Matkul> findById(@PathVariable String kode){
         Optional<Matkul> optionalMatkul = matkulService.findMatkul(kode);
-        if(optionalMatkul.isEmpty()){
+        if(!optionalMatkul.isPresent()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<Matkul>(optionalMatkul.get(),HttpStatus.OK);
