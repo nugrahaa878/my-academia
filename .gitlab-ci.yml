@@ -25,7 +25,7 @@ Test:
   script:
     - gradle :MyAc:check
     - gradle :MyAc:jacocoTestReport
-    - cat build/reports/jacoco/test/html/index.html
+    - cat MyAc/build/reports/jacoco/test/html/index.html
 
 
 Production:
