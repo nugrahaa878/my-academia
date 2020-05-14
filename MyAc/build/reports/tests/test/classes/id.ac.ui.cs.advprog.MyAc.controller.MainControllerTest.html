@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">3</div>
+<div class="counter">2</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.056s</div>
+<div class="counter">0.107s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,18 +78,13 @@
 </tr>
 </thead>
 <tr>
-<td class="success">whenHomeUrlAccessedShouldReturnHomePage()</td>
-<td class="success">0.148s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
 <td class="success">whenIndexUrlAccessedShouldReturnIndexPage()</td>
-<td class="success">0.196s</td>
+<td class="success">0.020s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">whenLoginUrlAccessedShouldReturnLoginPage()</td>
-<td class="success">0.712s</td>
+<td class="success">0.087s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -97,12 +92,12 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2020-05-14 15:08:02.210  INFO 7340 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest], using SpringBootContextLoader
-2020-05-14 15:08:02.217  INFO 7340 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2020-05-14 15:08:02.219  INFO 7340 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest]: MainControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2020-05-14 15:08:02.329  INFO 7340 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration id.ac.ui.cs.advprog.MyAc.MyAcApplication for test class id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest
-2020-05-14 15:08:02.344  INFO 7340 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2020-05-14 15:08:02.358  INFO 7340 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2f7c241e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3598e968, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@66b57042, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@56d74627, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1845d437, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6a64adfe, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@271ee790, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@4b946b2a, org.springframework.test.context.event.EventPublishingTestExecutionListener@7d46fa03, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@3282b308, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@62f0f0af, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@a550ae0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@40097f4b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@67348eb1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2a46f70]
+<pre>2020-05-14 15:38:25.514  INFO 18852 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest], using SpringBootContextLoader
+2020-05-14 15:38:25.515  INFO 18852 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-05-14 15:38:25.516  INFO 18852 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest]: MainControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-05-14 15:38:25.522  INFO 18852 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration id.ac.ui.cs.advprog.MyAc.MyAcApplication for test class id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest
+2020-05-14 15:38:25.523  INFO 18852 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-05-14 15:38:25.524  INFO 18852 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@ef7add0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@172e5f90, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@51f52c5e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@362f9074, org.springframework.test.context.support.DirtiesContextTestExecutionListener@585224c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@60322fb3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@185d6837, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@52bbe778, org.springframework.test.context.event.EventPublishingTestExecutionListener@7e002821, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@fbecfe5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7cd102f5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@715caa30, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@ee2c51a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@77daf2c4, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3e89060]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -112,15 +107,15 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.2.4.RELEASE)
 
-2020-05-14 15:08:02.856  INFO 7340 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : Starting MainControllerTest on LAPTOP-82VCQFF9 with PID 7340 (started by Ali Irsyaad in C:\Users\Ali Irsyaad\OneDrive - UNIVERSITAS INDONESIA\Ali's Document\Semester 4\AdPro\myacademy\MyAc)
-2020-05-14 15:08:02.858  INFO 7340 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : No active profile set, falling back to default profiles: default
-2020-05-14 15:08:09.112  INFO 7340 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f939315, org.springframework.security.web.context.SecurityContextPersistenceFilter@42df329c, org.springframework.security.web.header.HeaderWriterFilter@1150f4ea, org.springframework.security.web.csrf.CsrfFilter@2b7b0b54, org.springframework.security.web.authentication.logout.LogoutFilter@1c26c135, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@105bc517, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d145cef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7bf50203, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f005501, org.springframework.security.web.session.SessionManagementFilter@310dbe42, org.springframework.security.web.access.ExceptionTranslationFilter@175c23a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@781c84b4]
-2020-05-14 15:08:11.360  INFO 7340 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-05-14 15:08:11.763  INFO 7340 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-05-14 15:08:14.116  INFO 7340 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2020-05-14 15:08:14.120  INFO 7340 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2020-05-14 15:08:14.188  INFO 7340 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 59 ms
-2020-05-14 15:08:14.729  INFO 7340 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : Started MainControllerTest in 12.351 seconds (JVM running for 94.232)
+2020-05-14 15:38:25.564  INFO 18852 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : Starting MainControllerTest on DESKTOP-VVI2B95 with PID 18852 (started by USER in D:\Project\myacademy\myacademy\MyAc)
+2020-05-14 15:38:25.566  INFO 18852 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : No active profile set, falling back to default profiles: default
+2020-05-14 15:38:26.335  INFO 18852 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20229968, org.springframework.security.web.context.SecurityContextPersistenceFilter@df43855, org.springframework.security.web.header.HeaderWriterFilter@724c96fb, org.springframework.security.web.csrf.CsrfFilter@65d1ed2b, org.springframework.security.web.authentication.logout.LogoutFilter@28a7ad49, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4ce2d800, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44e9920d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52042f25, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2aa18d38, org.springframework.security.web.session.SessionManagementFilter@6726292f, org.springframework.security.web.access.ExceptionTranslationFilter@8e82789, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7fd8f62b]
+2020-05-14 15:38:26.533  INFO 18852 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-14 15:38:26.592  INFO 18852 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-14 15:38:26.791  INFO 18852 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-05-14 15:38:26.792  INFO 18852 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-05-14 15:38:26.807  INFO 18852 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 14 ms
+2020-05-14 15:38:26.828  INFO 18852 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : Started MainControllerTest in 1.299 seconds (JVM running for 14.844)
 </pre>
 </span>
 </div>
@@ -132,7 +127,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.3</a> at May 14, 2020, 3:08:46 PM</p>
+<a href="http://www.gradle.org">Gradle 6.3</a> at May 14, 2020, 3:38:31 PM</p>
 </div>
 </div>
 </body>

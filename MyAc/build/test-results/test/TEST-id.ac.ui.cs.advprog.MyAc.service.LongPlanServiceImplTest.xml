@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="id.ac.ui.cs.advprog.MyAc.service.LongPlanServiceImplTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-05-14T08:08:40" hostname="LAPTOP-82VCQFF9" time="1.052">
+<testsuite name="id.ac.ui.cs.advprog.MyAc.service.LongPlanServiceImplTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-05-14T22:38:30" hostname="DESKTOP-VVI2B95" time="0.179">
   <properties/>
-  <testcase name="whenFindAllIsCalledItShouldCallLongPlanRepositoryFindAll()" classname="id.ac.ui.cs.advprog.MyAc.service.LongPlanServiceImplTest" time="1.017"/>
-  <testcase name="whenGetIsCalledItShouldCallLongPlanRepositoryFindById()" classname="id.ac.ui.cs.advprog.MyAc.service.LongPlanServiceImplTest" time="0.019"/>
+  <testcase name="whenFindAllIsCalledItShouldCallLongPlanRepositoryFindAll()" classname="id.ac.ui.cs.advprog.MyAc.service.LongPlanServiceImplTest" time="0.172"/>
+  <testcase name="whenGetIsCalledItShouldCallLongPlanRepositoryFindById()" classname="id.ac.ui.cs.advprog.MyAc.service.LongPlanServiceImplTest" time="0.006"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="id.ac.ui.cs.advprog.MyAc.model.MatkulTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-05-14T08:08:39" hostname="LAPTOP-82VCQFF9" time="0.032">
+<testsuite name="id.ac.ui.cs.advprog.MyAc.model.MatkulTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-05-14T22:38:30" hostname="DESKTOP-VVI2B95" time="0.01">
   <properties/>
-  <testcase name="testGetSemester()" classname="id.ac.ui.cs.advprog.MyAc.model.MatkulTest" time="0.005"/>
-  <testcase name="testGetKode()" classname="id.ac.ui.cs.advprog.MyAc.model.MatkulTest" time="0.002"/>
-  <testcase name="testGetNama()" classname="id.ac.ui.cs.advprog.MyAc.model.MatkulTest" time="0.003"/>
-  <testcase name="testGetPenjelasan()" classname="id.ac.ui.cs.advprog.MyAc.model.MatkulTest" time="0.007"/>
-  <testcase name="testGetSks()" classname="id.ac.ui.cs.advprog.MyAc.model.MatkulTest" time="0.003"/>
+  <testcase name="testGetSemester()" classname="id.ac.ui.cs.advprog.MyAc.model.MatkulTest" time="0.001"/>
+  <testcase name="testGetKode()" classname="id.ac.ui.cs.advprog.MyAc.model.MatkulTest" time="0.001"/>
+  <testcase name="testGetNama()" classname="id.ac.ui.cs.advprog.MyAc.model.MatkulTest" time="0.001"/>
+  <testcase name="testGetPenjelasan()" classname="id.ac.ui.cs.advprog.MyAc.model.MatkulTest" time="0.001"/>
+  <testcase name="testGetSks()" classname="id.ac.ui.cs.advprog.MyAc.model.MatkulTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

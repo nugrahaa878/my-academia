@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="id.ac.ui.cs.advprog.MyAc.model.PostTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-05-14T08:08:40" hostname="LAPTOP-82VCQFF9" time="0.066">
+<testsuite name="id.ac.ui.cs.advprog.MyAc.model.PostTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-05-14T22:38:30" hostname="DESKTOP-VVI2B95" time="0.026">
   <properties/>
-  <testcase name="testGetPostText()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.003"/>
+  <testcase name="testGetPostText()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.0"/>
   <testcase name="testGetCourseTopic()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.002"/>
-  <testcase name="testGetTitle()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.029"/>
-  <testcase name="testGetCreateDate()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.005"/>
-  <testcase name="testGetId()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.003"/>
-  <testcase name="testSetCourseTopic()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.001"/>
-  <testcase name="testSetPostText()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.003"/>
-  <testcase name="testSetTitle()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.001"/>
+  <testcase name="testGetTitle()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.004"/>
+  <testcase name="testGetCreateDate()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.001"/>
+  <testcase name="testGetId()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.002"/>
+  <testcase name="testSetCourseTopic()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.002"/>
+  <testcase name="testSetPostText()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.002"/>
+  <testcase name="testSetTitle()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

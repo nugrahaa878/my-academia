@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="id.ac.ui.cs.advprog.MyAc.model.LongPlanTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-05-14T08:08:39" hostname="LAPTOP-82VCQFF9" time="0.096">
+<testsuite name="id.ac.ui.cs.advprog.MyAc.model.LongPlanTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-05-14T22:38:30" hostname="DESKTOP-VVI2B95" time="0.005">
   <properties/>
-  <testcase name="testGetId()" classname="id.ac.ui.cs.advprog.MyAc.model.LongPlanTest" time="0.003"/>
-  <testcase name="testGetNamaLongPlan()" classname="id.ac.ui.cs.advprog.MyAc.model.LongPlanTest" time="0.057"/>
-  <testcase name="testGetKodeUser()" classname="id.ac.ui.cs.advprog.MyAc.model.LongPlanTest" time="0.004"/>
+  <testcase name="testGetId()" classname="id.ac.ui.cs.advprog.MyAc.model.LongPlanTest" time="0.001"/>
+  <testcase name="testGetNamaLongPlan()" classname="id.ac.ui.cs.advprog.MyAc.model.LongPlanTest" time="0.001"/>
+  <testcase name="testGetKodeUser()" classname="id.ac.ui.cs.advprog.MyAc.model.LongPlanTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
