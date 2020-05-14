@@ -10,7 +10,7 @@ public class MatkulTest {
 
     @BeforeEach
     public void setUp() throws Exception {
-        this.matkul = new Matkul("CS1234", "Matkul Test", 2, 5);
+        this.matkul = new Matkul("CS1234", "Matkul Test", "Deskripsi Test", 2, 5);
     }
 
     @Test
@@ -24,12 +24,17 @@ public class MatkulTest {
     }
 
     @Test
-    public void testGetIsiPost() {
+    public void testGetPenjelasan() {
+        assertEquals("Deskripsi Test", this.matkul.getPenjelasan());
+    }
+
+    @Test
+    public void testGetSemester() {
         assertEquals(2, this.matkul.getSemester());
     }
 
     @Test
-    public void testGetTopikMataKuliah() {
+    public void testGetSks() {
         assertEquals(5, this.matkul.getSks());
     }
 }

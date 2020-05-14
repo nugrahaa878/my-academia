@@ -4,37 +4,59 @@ import id.ac.ui.cs.advprog.MyAc.model.Matkul;
 import id.ac.ui.cs.advprog.MyAc.repository.MatkulRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-// TODO: Import service bean
+
 @Service
 public class MatkulServiceImpl implements MatkulService {
-    // TODO: implementasi semua method di MatkulService.java. Coba lihat dokumentasi JpaRepository untuk mengimplementasikan Service
 
-    @Autowired
-    private MatkulRepository matkulRepository;
+    private RestTemplate restTemplate = new RestTemplate();
+    Matkul[] allMatkul = restTemplate.getForObject("http://matkulservice.herokuapp.com/matkul" , Matkul[].class);
 
-    public List<Matkul> findAll(){
-        return matkulRepository.findAll();
+    public Matkul[] findAll(){
+        return allMatkul;
     }
-    public Optional<Matkul> findMatkul(String kode){
-        return matkulRepository.findById(kode);
+
+    public List<Matkul> findMatkul(String matkul){
+        List<Matkul> filteredMatkul = new ArrayList<>();
+        for (Matkul matkulFind : allMatkul) {
+            String namaMatkulLowerCase = matkulFind.getNama().toLowerCase();
+            String namaMatkulDicariLowerCase = matkul.toLowerCase();
+            if (namaMatkulLowerCase.contains(namaMatkulDicariLowerCase)) {
+                filteredMatkul.add(matkulFind);
+            }
+        }
+        return filteredMatkul;
     }
-    public List<Matkul> findMatkulBySemester(int semester){
-        return matkulRepository.findMatkulBySemester(semester);
+    public List<Matkul> findMatkulBySemester(String semester){
+        List<Matkul> filteredMatkul = new ArrayList<>();
+        for (Matkul matkulFind : allMatkul) {
+            int semesterAll = matkulFind.getSemester();
+            int semesterDicari = Integer.parseInt(semester);
+            if (semesterAll == semesterDicari) {
+                filteredMatkul.add(matkulFind);
+            }
+        }
+        return filteredMatkul;
+
     }
-    public void erase(String kode){ //delete
-        matkulRepository.deleteById(kode);
-    }
-    public Matkul rewrite(Matkul matkul) { //update
-        matkulRepository.save(matkul);
-        return matkul;
-    }
-    public Matkul register(Matkul matkul) {//create
-        matkulRepository.save(matkul);
-        return matkul;
+    public List<Matkul> findMatkulWithSemester(String matkul, String semester){
+        List<Matkul> filteredMatkul = new ArrayList<>();
+        for (Matkul matkulFind : allMatkul) {
+            String namaMatkulLowerCase = matkulFind.getNama().toLowerCase();
+            String namaMatkulDicariLowerCase = matkul.toLowerCase();
+            int semesterAll = matkulFind.getSemester();
+            int semesterDicari = Integer.parseInt(semester);
+            if (namaMatkulLowerCase.contains(namaMatkulDicariLowerCase) && semesterAll == semesterDicari) {
+                filteredMatkul.add(matkulFind);
+            }
+
+        }
+        return filteredMatkul;
     }
 }
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="id.ac.ui.cs.advprog.MyAc.model.UserTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-05-14T07:32:52" hostname="LAPTOP-930TCP7M" time="0.016">
+  <properties/>
+  <testcase name="testSetPassword()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.002"/>
+  <testcase name="testGetPassword()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.0"/>
+  <testcase name="testGetEmail()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.001"/>
+  <testcase name="testSetFirstName()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.0"/>
+  <testcase name="testSetLastName()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.001"/>
+  <testcase name="testGetLastName()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.001"/>
+  <testcase name="testGetFirstName()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.001"/>
+  <testcase name="testSetEmail()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

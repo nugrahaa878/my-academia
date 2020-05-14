@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="id.ac.ui.cs.advprog.MyAc.service.UserServiceImplTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-05-14T07:32:52" hostname="LAPTOP-930TCP7M" time="0.181">
+  <properties/>
+  <testcase name="testWhenFindByEmailCalledShouldCallFindByEmail()" classname="id.ac.ui.cs.advprog.MyAc.service.UserServiceImplTest" time="0.173"/>
+  <testcase name="testWhenSaveCalledShouldSaveDto()" classname="id.ac.ui.cs.advprog.MyAc.service.UserServiceImplTest" time="0.003"/>
+  <testcase name="testWhenLoadByUserNameCalledShouldCallLoadByUsername()" classname="id.ac.ui.cs.advprog.MyAc.service.UserServiceImplTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

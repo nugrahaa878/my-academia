@@ -16,6 +16,9 @@ public class Matkul {
     @Column(name = "nama")
     private String nama;
 
+    @Column(name = "penjelasan")
+    private String penjelasan;
+
     @Column(name = "semester")
     private int semester;
 
@@ -26,11 +29,12 @@ public class Matkul {
     public Matkul(){
     }
 
-    public Matkul(String kode,String nama, int semester, int sks){
+    public Matkul(String kode, String nama, String penjelasan, int semester, int sks){
         this.nama = nama;
         this.kode = kode;
         this.semester = semester;
         this.sks = sks;
+        this.penjelasan = penjelasan;
     }
 
     public String getNama(){
@@ -48,6 +52,8 @@ public class Matkul {
     public int getSks(){
         return this.sks;
     }
+
+    public String getPenjelasan(){ return this.penjelasan; }
 
 
 }

@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto+Mono&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="/static/css/matkulSearch.css">
     <style>
         #navbar{
-            margin-bottom: 50px;
+            background-color: white;
         }
         #myac {
             font-family: Roboto, sans-serif;
@@ -22,7 +21,7 @@
             font-weight: bold;
             font-size: 43.4915px;
             line-height: 51px;
-            color: #000000;
+            color: #F1A350;
         }
 
         .butPage{
@@ -35,35 +34,49 @@
         }
 
         .current{
-            color: #F5E06C;
+            color: #F1A350;
         }
 
         .butPage:hover{
             position: relative;
             text-decoration: none;
-            color: #F5E06C;
+            color: #F1A350;
         }
 
         #inputMatkul{
             background: #FFFFFF;
-            border: 2.24956px solid #F5E06C;
+            border: 2.24956px solid #F1A350;
             box-sizing: border-box;
             border-radius: 37.4927px;
             height: 38.24px;
         }
 
+        .matkulTitle{
+            text-decoration: none;
+            color: black;
+        }
+
+        .matkulTitle:hover{
+            color: #F1A350;
+            text-decoration: none;
+        }
+
         .inputSelect{
             background: #FFFFFF;
-            border: 2.24956px solid #F5E06C;
+            border: 2.24956px solid #F1A350;
             box-sizing: border-box;
             border-radius: 37.4927px;
             height: 38.24px;
             width: 178.47px;
         }
 
+        .cont{
+            background-color: white;
+        }
+
         #searchbtn{
-            background: #F5E06C;
-            border: 2.24956px solid #F5E06C;
+            background: #F1A350;
+            border: 2.24956px solid #F1A350;
             box-sizing: border-box;
             border-radius: 37.4927px;
 
@@ -71,33 +84,34 @@
     </style>
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-md my-nav" id="navbar">
-        <a class="navbar-brand" href="#" id="myac">My Ac</a>
+    <nav class="navbar sticky-top navbar-expand-md my-nav" id="navbar">
+        <a class="navbar-brand" href="#" id="myac">MyAcademia</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link mx-5 butPage current" href="#">Matakuliah</a>
-                <a class="nav-item nav-link mx-5 butPage" href="#">Long Plan</a>
-                <a class="nav-item nav-link mx-5 butPage" href="#">Short Plan</a>
-                <a class="nav-item nav-link mx-5 butPage" href="#">Forum</a>
-                <a class="nav-item nav-link mx-5 butPage" th:href="@{/logout}">Log Out</a>
+                <a class="navbar-text nav-item nav-link mx-5 butPage current" href="#">Matakuliah</a>
+                <a class="navbar-text nav-item nav-link mx-5 butPage" href="#">Long Plan</a>
+                <a class="navbar-text nav-item nav-link mx-5 butPage" href="#">Short Plan</a>
+                <a class="navbar-text nav-item nav-link mx-5 butPage" href="#">Forum</a>
+                <a class="navbar-text nav-item nav-link mx-5 butPage" th:href="@{/logout}">Log Out</a>
             </div>
         </div>
     </nav>
-    <br><br><br><br>
 
-    <form action="#" method="post">
-        <div class="jumbotron">
+
+    <form th:action="@{/api/matkul/search}" method="get">
+        <div class="jumbotron cont">
             <div class="row">
                 <div class="form-group col-sm-4">
-                    <label for="inputMatkul" class="hide"></label>
-                    <input type="text" class="form-control" id="inputMatkul" value="Course Name">
+
+                    <input type="text" class="form-control" id="inputMatkul" placeholder="Course Name" name="matkul">
                 </div>
                 <div class="form-group col-sm-2">
                     <label for="inputSemester" class="hide"></label>
-                    <select name="inputSemester" id="inputSemester" class="inputSelect">
+                    <select name="semester" id="inputSemester" class="inputSelect">
+                        <option value="none" disabled selected>Semester</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -110,16 +124,17 @@
                 </div>
                 <div class="form-group col-sm-2">
                     <label for="inputJurusan" class="hide"></label>
-                    <select name="inputJurusan" id="inputJurusan" class="inputSelect">
+                    <select name="jurusan" id="inputJurusan" class="inputSelect">
+                        <option value="none" disabled selected>Jurusan</option>
                         <option value="IK">Ilmu Komputer</option>
                         <option value="SI">Sistem Informasi</option>
                     </select>
                 </div>
-                <div class="col-sm-4"></div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                    <button type="submit" id="searchbtn" class="btn btn-primary">Search</button>
+                </div>
             </div>
-
-            <button type="submit" id="searchbtn" class="btn btn-primary">Search</button>
-
         </div>
 <!--        <table>-->
 <!--        <tr th:each="matkul : ${matkulALl}">-->
@@ -131,11 +146,15 @@
 
 <!--        </tr>-->
 <!--        </table>-->
-        <div th:each="matkul : ${matkulALl}" class="jumbotron">
-            <h3 th:text="${matkul.kode}"></h3>
-            <h3><a href="#" th:text="${matkul.nama}"></a></h3>
-            <h3 th:text="${matkul.semester}"></h3>
-            <h3 th:text="${matkul.sks}"></h3>
+        <div class="row jumbotron cont">
+            <div th:each="matkul : ${matkulALl}" class="col-sm-6">
+<!--                <h3 th:text="${matkul.kode}"></h3>-->
+                <h3><a href="#" th:text="${matkul.nama}" class="matkulTitle"></a></h3>
+<!--                <h3 th:text="${matkul.semester}">Semester </h3>-->
+<!--                <h3 th:text="${matkul.sks}"></h3>-->
+                <p th:text="${matkul.penjelasan}"></p>
+
+            </div>
         </div>
     </form>
 
