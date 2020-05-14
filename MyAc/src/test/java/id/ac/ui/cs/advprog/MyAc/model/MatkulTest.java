@@ -10,7 +10,7 @@ public class MatkulTest {
 
     @BeforeEach
     public void setUp() throws Exception {
-        this.matkul = new Matkul("CS1234", "Matkul Test", 2, 5);
+        this.matkul = new Matkul("CS1234", "Matkul Test", 2, 5, "Lorem ipsum");
     }
 
     @Test
