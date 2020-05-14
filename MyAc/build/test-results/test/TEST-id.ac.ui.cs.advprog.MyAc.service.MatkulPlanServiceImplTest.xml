@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="id.ac.ui.cs.advprog.MyAc.service.MatkulPlanServiceImplTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-05-14T06:48:08" hostname="LAPTOP-82VCQFF9" time="0.275">
+<testsuite name="id.ac.ui.cs.advprog.MyAc.service.MatkulPlanServiceImplTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-05-14T07:59:51" hostname="LAPTOP-82VCQFF9" time="0.518">
   <properties/>
-  <testcase name="whenFindAllIsCalledItShouldCallMatkulPlanRepositoryFindAll()" classname="id.ac.ui.cs.advprog.MyAc.service.MatkulPlanServiceImplTest" time="0.263"/>
+  <testcase name="whenFindAllIsCalledItShouldCallMatkulPlanRepositoryFindAll()" classname="id.ac.ui.cs.advprog.MyAc.service.MatkulPlanServiceImplTest" time="0.501"/>
   <testcase name="whenGetIsCalledItShouldCallMatkulPlanRepositoryFindById()" classname="id.ac.ui.cs.advprog.MyAc.service.MatkulPlanServiceImplTest" time="0.01"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

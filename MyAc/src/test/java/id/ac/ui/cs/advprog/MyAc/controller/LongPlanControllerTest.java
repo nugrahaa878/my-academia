@@ -16,6 +16,9 @@ public class LongPlanControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
+    @MockBean
+    private UserService userService;
+
     @WithMockUser(username = "spring")
     @Test
     public void whenLongPlanUrlAccessedShouldReturnLongPlanPage() throws Exception {
