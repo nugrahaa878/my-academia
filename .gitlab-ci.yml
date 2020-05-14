@@ -20,46 +20,11 @@ Build:
   script:
     - gradle build
 
-Test:
+test:
   stage: test
   script:
     - gradle :MyAc:check
     - gradle :MyAc:jacocoTestReport
-    - cat MyAc/build/reports/jacoco/test/html/index.html
-
-test:ali:
-  stage: test
-  script:
-    - gradle :ali:check
-    - gradle :ali:jacocoTestReport
-    - cat MyAc/build/reports/jacoco/test/html/index.html
-
-test:forum:
-  stage: test
-  script:
-    - gradle :forum:check
-    - gradle :forum:jacocoTestReport
-    - cat MyAc/build/reports/jacoco/test/html/index.html
-
-test:InformasiDetailPerMatkul:
-  stage: test
-  script:
-    - gradle :InformasiDetailPerMatkul:check
-    - gradle :InformasiDetailPerMatkul:jacocoTestReport
-    - cat MyAc/build/reports/jacoco/test/html/index.html
-
-test:Alvin:
-  stage: test
-  script:
-    - gradle :Alvin:check
-    - gradle :Alvin:jacocoTestReport
-    - cat MyAc/build/reports/jacoco/test/html/index.html
-
-test:login:
-  stage: test
-  script:
-    - gradle :login:check
-    - gradle :login:jacocoTestReport
     - cat MyAc/build/reports/jacoco/test/html/index.html
 
 Production:
