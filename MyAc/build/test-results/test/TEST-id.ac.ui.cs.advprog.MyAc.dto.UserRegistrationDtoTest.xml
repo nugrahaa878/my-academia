@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-13T14:58:58" hostname="LAPTOP-82VCQFF9" time="0.056">
   <properties/>
   <testcase name="testSetFirstName()" classname="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" time="0.056"/>
+=======
+<testsuite name="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-14T07:32:51" hostname="LAPTOP-930TCP7M" time="0.012">
+  <properties/>
+  <testcase name="testSetFirstName()" classname="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" time="0.012"/>
+>>>>>>> InformasiDetailPerMatkul
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

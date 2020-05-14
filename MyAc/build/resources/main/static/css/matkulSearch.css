@@ -1,0 +1,69 @@
+#navbar{
+    background-color: white;
+}
+#myac {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43.4915px;
+    line-height: 51px;
+    color: #F1A350;
+}
+
+.butPage{
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17.9965px;
+    line-height: 21px;
+    color: black;
+}
+
+.current{
+    color: #F1A350;
+}
+
+.butPage:hover{
+    position: relative;
+    text-decoration: none;
+    color: #F1A350;
+}
+
+#inputMatkul{
+    background: #FFFFFF;
+    border: 2.24956px solid #F1A350;
+    box-sizing: border-box;
+    border-radius: 37.4927px;
+    height: 38.24px;
+}
+
+.matkulTitle{
+    text-decoration: none;
+    color: black;
+}
+
+.matkulTitle:hover{
+    color: #F1A350;
+    text-decoration: none;
+}
+
+.inputSelect{
+    background: #FFFFFF;
+    border: 2.24956px solid #F1A350;
+    box-sizing: border-box;
+    border-radius: 37.4927px;
+    height: 38.24px;
+    width: 178.47px;
+}
+
+.cont{
+    background-color: white;
+}
+
+#searchbtn{
+    background: #F1A350;
+    border: 2.24956px solid #F1A350;
+    box-sizing: border-box;
+    border-radius: 37.4927px;
+
+}

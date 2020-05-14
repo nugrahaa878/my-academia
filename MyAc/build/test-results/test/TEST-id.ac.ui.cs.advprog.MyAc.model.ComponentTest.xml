@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite name="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-05-13T14:58:58" hostname="LAPTOP-82VCQFF9" time="0.149">
   <properties/>
   <testcase name="testGetScore()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.008"/>
   <testcase name="testGetComponentName()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.011"/>
   <testcase name="testGetPercentage()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.01"/>
+=======
+<testsuite name="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-05-14T07:32:52" hostname="LAPTOP-930TCP7M" time="0.006">
+  <properties/>
+  <testcase name="testGetScore()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.002"/>
+  <testcase name="testGetComponentName()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.001"/>
+  <testcase name="testGetPercentage()" classname="id.ac.ui.cs.advprog.MyAc.model.ComponentTest" time="0.001"/>
+>>>>>>> InformasiDetailPerMatkul
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
