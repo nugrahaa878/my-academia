@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="id.ac.ui.cs.advprog.MyAc.model.PostTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-05-14T06:24:01" hostname="LAPTOP-82VCQFF9" time="0.058">
+<testsuite name="id.ac.ui.cs.advprog.MyAc.model.PostTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-05-14T06:48:07" hostname="LAPTOP-82VCQFF9" time="0.053">
   <properties/>
-  <testcase name="testGetPostText()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.002"/>
+  <testcase name="testGetPostText()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.004"/>
   <testcase name="testGetCourseTopic()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.006"/>
-  <testcase name="testGetTitle()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.004"/>
-  <testcase name="testGetCreateDate()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.008"/>
-  <testcase name="testGetId()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.004"/>
+  <testcase name="testGetTitle()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.003"/>
+  <testcase name="testGetCreateDate()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.005"/>
+  <testcase name="testGetId()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.003"/>
   <testcase name="testSetCourseTopic()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.003"/>
-  <testcase name="testSetPostText()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.004"/>
+  <testcase name="testSetPostText()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.002"/>
   <testcase name="testSetTitle()" classname="id.ac.ui.cs.advprog.MyAc.model.PostTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
