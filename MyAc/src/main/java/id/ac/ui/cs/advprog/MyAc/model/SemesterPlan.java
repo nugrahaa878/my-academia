@@ -23,7 +23,8 @@ public class SemesterPlan {
 
     public SemesterPlan(){}
 
-    public SemesterPlan(Long idLong, int semester){
+    public SemesterPlan(Long id, Long idLong, int semester){
+        this.id = id;
         this.idLong = idLong;
         this.semester = semester;
     }

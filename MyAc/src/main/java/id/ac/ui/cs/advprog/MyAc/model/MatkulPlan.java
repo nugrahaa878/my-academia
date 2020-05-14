@@ -23,7 +23,8 @@ public class MatkulPlan {
     public MatkulPlan() {
     }
 
-    public MatkulPlan(Long idSemester, String kodeMatkul) {
+    public MatkulPlan(Long id, Long idSemester, String kodeMatkul) {
+        this.id = id;
         this.idSemester = idSemester;
         this.kodeMatkul = kodeMatkul;
     }

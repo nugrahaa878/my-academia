@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="id.ac.ui.cs.advprog.MyAc.service.UserServiceImplTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-05-13T14:59:01" hostname="LAPTOP-82VCQFF9" time="1.009">
+<testsuite name="id.ac.ui.cs.advprog.MyAc.service.UserServiceImplTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-05-14T06:24:04" hostname="LAPTOP-82VCQFF9" time="0.465">
   <properties/>
-  <testcase name="testWhenFindByEmailCalledShouldCallFindByEmail()" classname="id.ac.ui.cs.advprog.MyAc.service.UserServiceImplTest" time="0.988"/>
-  <testcase name="testWhenSaveCalledShouldSaveDto()" classname="id.ac.ui.cs.advprog.MyAc.service.UserServiceImplTest" time="0.008"/>
-  <testcase name="testWhenLoadByUserNameCalledShouldCallLoadByUsername()" classname="id.ac.ui.cs.advprog.MyAc.service.UserServiceImplTest" time="0.008"/>
+  <testcase name="testWhenFindByEmailCalledShouldCallFindByEmail()" classname="id.ac.ui.cs.advprog.MyAc.service.UserServiceImplTest" time="0.435"/>
+  <testcase name="testWhenSaveCalledShouldSaveDto()" classname="id.ac.ui.cs.advprog.MyAc.service.UserServiceImplTest" time="0.007"/>
+  <testcase name="testWhenLoadByUserNameCalledShouldCallLoadByUsername()" classname="id.ac.ui.cs.advprog.MyAc.service.UserServiceImplTest" time="0.015"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

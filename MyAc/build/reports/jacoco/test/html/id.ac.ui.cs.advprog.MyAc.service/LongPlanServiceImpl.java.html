@@ -9,15 +9,15 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-<span class="nc" id="L12">public class LongPlanServiceImpl implements LongPlanService {</span>
+<span class="fc" id="L12">public class LongPlanServiceImpl implements LongPlanService {</span>
     @Autowired
     private LongPlanRepository longPlanRepository;
 
     public List&lt;LongPlan&gt; findAll(){
-<span class="nc" id="L17">        return longPlanRepository.findAll();</span>
+<span class="fc" id="L17">        return longPlanRepository.findAll();</span>
     }
     public Optional&lt;LongPlan&gt; findLongPlan(Long id){
-<span class="nc" id="L20">        return longPlanRepository.findById(id);</span>
+<span class="fc" id="L20">        return longPlanRepository.findById(id);</span>
     }
     public void erase(Long id){ //delete
 <span class="nc" id="L23">        longPlanRepository.deleteById(id);</span>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="id.ac.ui.cs.advprog.MyAc.model.RoleTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-05-13T14:58:59" hostname="LAPTOP-82VCQFF9" time="0.024">
+<testsuite name="id.ac.ui.cs.advprog.MyAc.model.RoleTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-05-14T06:24:01" hostname="LAPTOP-82VCQFF9" time="0.021">
   <properties/>
-  <testcase name="testGetName()" classname="id.ac.ui.cs.advprog.MyAc.model.RoleTest" time="0.017"/>
-  <testcase name="testSetName()" classname="id.ac.ui.cs.advprog.MyAc.model.RoleTest" time="0.004"/>
+  <testcase name="testGetName()" classname="id.ac.ui.cs.advprog.MyAc.model.RoleTest" time="0.003"/>
+  <testcase name="testSetName()" classname="id.ac.ui.cs.advprog.MyAc.model.RoleTest" time="0.015"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
