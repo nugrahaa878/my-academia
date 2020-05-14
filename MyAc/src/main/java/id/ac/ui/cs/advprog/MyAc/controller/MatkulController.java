@@ -1,76 +1,28 @@
 package id.ac.ui.cs.advprog.MyAc.controller;
 
 import id.ac.ui.cs.advprog.MyAc.model.Matkul;
-import id.ac.ui.cs.advprog.MyAc.service.MatkulService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
-import java.util.List;
-import java.util.Optional;
+import java.io.IOException;
 
 @RestController
-@RequestMapping(path = "/api/matkul")
+@RequestMapping(path = "/matkul")
 public class MatkulController {
 
-    @Autowired
-    private MatkulService matkulService;
-    
+    @GetMapping("/cobaapi")
+    public String getSemua(Model model) throws IOException {
 
-    @GetMapping
-    public ResponseEntity<List<Matkul>> findAll(){
-        return new ResponseEntity<>(matkulService.findAll(),HttpStatus.OK);
-    }
+        RestTemplate restTemplate = new RestTemplate();
+        Matkul[] listMatkul = restTemplate.getForObject("http://matkulservice.herokuapp.com/matkul", Matkul[].class);
 
-    @PostMapping
-    public ResponseEntity create(@RequestBody Matkul matkul){
-        matkulService.register(matkul);
-        return new ResponseEntity(HttpStatus.OK);
-    }
-
-    @GetMapping("/{kode}")
-    public ResponseEntity<Matkul> findById(@PathVariable String kode){
-        Optional<Matkul> optionalMatkul = matkulService.findMatkul(kode);
-
-        if(!optionalMatkul.isPresent()){
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        model.addAttribute(listMatkul);
+        for (Matkul matkul :
+                listMatkul) {
+            System.out.println(matkul.getNama());
         }
-        return new ResponseEntity<Matkul>(optionalMatkul.get(),HttpStatus.OK);
+        return null;
     }
-
-    @GetMapping("/semester/{semester}")
-    public ResponseEntity<List<Matkul>> findMatkulBySemester(@PathVariable int semester){
-        List<Matkul> listMatkul = matkulService.findMatkulBySemester(semester);
-        if(listMatkul.isEmpty()){
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-//        return new ResponseEntity<Matkul>(listMatkul,HttpStatus.OK);
-        return new ResponseEntity(listMatkul, HttpStatus.OK);
-//        return null;
-    }
-
-
-
-//    @PutMapping("/{kode}")
-//    public ResponseEntity<Matkul> update(@PathVariable String kode, @RequestBody Matkul matkul){
-//        Optional<Matkul> optionalMatkul = matkulService.findMatkul(kode);
-//        if(optionalMatkul.isEmpty()){
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//        matkul.setId(kode);
-//        return new ResponseEntity<>(matkulService.rewrite(matkul),HttpStatus.OK);
-//    }
-//
-//    @DeleteMapping("/{kode}")
-//    public ResponseEntity delete(@PathVariable String kode){
-//        Optional<Matkul> optionalMatkul = matkulService.findMatkul(kode);
-//        if(optionalMatkul.isEmpty()){
-//            return new ResponseEntity(HttpStatus.NOT_FOUND);
-//        }
-//        matkulService.erase(kode);
-//        return new ResponseEntity(HttpStatus.OK);
-//    }
-
 
 }

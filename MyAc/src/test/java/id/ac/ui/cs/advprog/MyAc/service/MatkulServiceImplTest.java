@@ -12,35 +12,5 @@ import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
 public class MatkulServiceImplTest {
-    @Mock
-    private MatkulRepository matkulRepository;
 
-    @InjectMocks
-    private MatkulServiceImpl matkulService;
-
-    private Matkul matkul;
-
-
-    @BeforeEach
-    public void setUp() throws Exception {
-        this.matkul = new Matkul("CS1234", "Matkul Test", 2, 5);
-    }
-
-    @Test
-    public void whenFindAllIsCalledItShouldCallMatkulRepositoryFindAll() {
-        matkulService.findAll();
-        verify(matkulRepository, times(1)).findAll();
-    }
-
-    @Test
-    public void whenGetIsCalledItShouldCallMatkulRepositoryFindById() {
-        matkulService.findMatkul("CS1234");
-        verify(matkulRepository, times(1)).findById("CS1234");
-    }
-
-    @Test
-    public void whenGetIsCalledItShouldCallMatkulRepositoryFindBySemester() {
-        matkulService.findMatkulBySemester(2);
-        verify(matkulRepository, times(1)).findMatkulBySemester(2);
-    }
 }
