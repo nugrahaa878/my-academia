@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My Academia | Long Plan</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <link rel="shortcut icon" th:href="@{img/rektorat-flat-removebg.png}" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        #navbar{
+            background-color: white;
+        }
+        #myac {
+            font-family: Roboto, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 43.4915px;
+            line-height: 51px;
+            color: #F1A350;
+        }
+
+        .butPage{
+            font-family: Roboto, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 17.9965px;
+            line-height: 21px;
+            color: black;
+        }
+
+        .current{
+            color: #F1A350;
+        }
+
+        .butPage:hover{
+            position: relative;
+            text-decoration: none;
+            color: #F1A350;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar sticky-top navbar-expand-md my-nav" id="navbar">
+    <a class="navbar-brand" href="#" id="myac">MyAcademia</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+            <a class="navbar-text nav-item nav-link mx-5 butPage" href="#">Matakuliah</a>
+            <a class="navbar-text nav-item nav-link mx-5 butPage current" href="#">Long Plan</a>
+            <a class="navbar-text nav-item nav-link mx-5 butPage" href="#">Short Plan</a>
+            <a class="navbar-text nav-item nav-link mx-5 butPage" href="#">Forum</a>
+            <a class="navbar-text nav-item nav-link mx-5 butPage" th:href="@{/logout}">Log Out</a>
+        </div>
+    </div>
+</nav>
+
+longPlan
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

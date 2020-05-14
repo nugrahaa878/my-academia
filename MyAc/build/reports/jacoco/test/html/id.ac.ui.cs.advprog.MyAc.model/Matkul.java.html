@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = &quot;matkul&quot;)
@@ -16,8 +17,6 @@ public class Matkul {
     @Column(name = &quot;nama&quot;)
     private String nama;
 
-    @Column(name = &quot;penjelasan&quot;)
-    private String penjelasan;
 
     @Column(name = &quot;semester&quot;)
     private int semester;
@@ -25,61 +24,47 @@ public class Matkul {
     @Column(name = &quot;sks&quot;)
     private int sks;
 
-    // TODO: Lengkapi atribut yang sudah anda rencanakan. Ingat bahwa atribut yang dibuat bersifat privat.
-<span class="nc" id="L29">    public Matkul(){</span>
-<span class="nc" id="L30">    }</span>
+    @Column(name = &quot;penjelasan&quot;, length = 1000)
+    @Size(max = 1000)
+    private String penjelasan;
 
-<<<<<<< HEAD
-<span class="fc" id="L29">    public Matkul(String kode, String nama, int semester, int sks){</span>
-<span class="fc" id="L30">        this.nama = nama;</span>
-<span class="fc" id="L31">        this.kode = kode;</span>
-<span class="fc" id="L32">        this.semester = semester;</span>
-<span class="fc" id="L33">        this.sks = sks;</span>
-<span class="fc" id="L34">    }</span>
+<span class="fc" id="L31">    public Matkul() {</span>
+<span class="fc" id="L32">    }</span>
 
-    public String getNama(){
-<span class="fc" id="L37">        return this.nama;</span>
+
+<span class="fc" id="L35">    public Matkul(String kode, String nama, String penjelasan, int semester, int sks){</span>
+<span class="fc" id="L36">        this.nama = nama;</span>
+<span class="fc" id="L37">        this.kode = kode;</span>
+<span class="fc" id="L38">        this.semester = semester;</span>
+<span class="fc" id="L39">        this.sks = sks;</span>
+<span class="fc" id="L40">        this.penjelasan = penjelasan;</span>
+<span class="fc" id="L41">    }</span>
+
+    public String getKode() {
+<span class="fc" id="L44">        return kode;</span>
     }
 
-    public int getSemester(){
-<span class="fc" id="L41">        return this.semester;</span>
+    public String getNama() {
+<span class="fc" id="L48">        return nama;</span>
+
     }
 
-    public String getKode(){
-<span class="fc" id="L45">        return this.kode;</span>
+    public int getSemester() {
+<span class="fc" id="L53">        return semester;</span>
     }
 
-    public int getSks(){
-<span class="fc" id="L49">        return this.sks;</span>
-=======
-<span class="fc" id="L32">    public Matkul(String kode, String nama, String penjelasan, int semester, int sks){</span>
-<span class="fc" id="L33">        this.nama = nama;</span>
-<span class="fc" id="L34">        this.kode = kode;</span>
-<span class="fc" id="L35">        this.semester = semester;</span>
-<span class="fc" id="L36">        this.sks = sks;</span>
-<span class="fc" id="L37">        this.penjelasan = penjelasan;</span>
-<span class="fc" id="L38">    }</span>
-
-    public String getNama(){
-<span class="fc" id="L41">        return this.nama;</span>
+    public int getSks() {
+<span class="fc" id="L57">        return sks;</span>
     }
 
-    public int getSemester(){
-<span class="fc" id="L45">        return this.semester;</span>
+    public String getPenjelasan() {
+<span class="fc" id="L61">        return penjelasan;</span>
     }
 
-    public String getKode(){
-<span class="fc" id="L49">        return this.kode;</span>
+    @Override
+    public String toString() {
+<span class="nc" id="L66">        return String.format(&quot;Kode: %s, Nama: %s, Semester: %d, Sks: %d&quot;, this.kode, this.nama, this.semester, this.sks);</span>
     }
-
-    public int getSks(){
-<span class="fc" id="L53">        return this.sks;</span>
->>>>>>> InformasiDetailPerMatkul
-    }
-
-<span class="fc" id="L56">    public String getPenjelasan(){ return this.penjelasan; }</span>
-
-
 }
 
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

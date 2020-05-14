@@ -9,15 +9,15 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-<span class="nc" id="L12">public class MatkulPlanServiceImpl implements MatkulPlanService{</span>
+<span class="fc" id="L12">public class MatkulPlanServiceImpl implements MatkulPlanService{</span>
     @Autowired
     private MatkulPlanRepository matkulPlanRepository;
 
     public List&lt;MatkulPlan&gt; findAll(){
-<span class="nc" id="L17">        return matkulPlanRepository.findAll();</span>
+<span class="fc" id="L17">        return matkulPlanRepository.findAll();</span>
     }
     public Optional&lt;MatkulPlan&gt; findMatkulPlan(Long id){
-<span class="nc" id="L20">        return matkulPlanRepository.findById(id);</span>
+<span class="fc" id="L20">        return matkulPlanRepository.findById(id);</span>
     }
     public void erase(Long id){ //delete
 <span class="nc" id="L23">        matkulPlanRepository.deleteById(id);</span>

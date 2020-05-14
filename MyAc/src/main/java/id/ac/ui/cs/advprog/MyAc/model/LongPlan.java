@@ -23,7 +23,8 @@ public class LongPlan {
 
     public LongPlan(){}
 
-    public LongPlan(Long kodeUser, String namaLongPlan){
+    public LongPlan(Long id, Long kodeUser, String namaLongPlan){
+        this.id = id;
         this.kodeUser = kodeUser;
         this.namaLongPlan = namaLongPlan;
     }

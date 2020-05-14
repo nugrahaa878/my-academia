@@ -9,15 +9,15 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-<span class="nc" id="L12">public class SemesterPlanServiceImpl implements SemesterPlanService {</span>
+<span class="fc" id="L12">public class SemesterPlanServiceImpl implements SemesterPlanService {</span>
     @Autowired
     private SemesterPlanRepository semesterPlanRepository;
 
     public List&lt;SemesterPlan&gt; findAll(){
-<span class="nc" id="L17">        return semesterPlanRepository.findAll();</span>
+<span class="fc" id="L17">        return semesterPlanRepository.findAll();</span>
     }
     public Optional&lt;SemesterPlan&gt; findSemesterPlan(Long id){
-<span class="nc" id="L20">        return semesterPlanRepository.findById(id);</span>
+<span class="fc" id="L20">        return semesterPlanRepository.findById(id);</span>
     }
     public void erase(Long id){ //delete
 <span class="nc" id="L23">        semesterPlanRepository.deleteById(id);</span>

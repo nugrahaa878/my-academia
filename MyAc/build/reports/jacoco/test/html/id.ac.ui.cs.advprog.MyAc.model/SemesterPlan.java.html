@@ -23,33 +23,34 @@ public class SemesterPlan {
 
 <span class="nc" id="L24">    public SemesterPlan(){}</span>
 
-<span class="nc" id="L26">    public SemesterPlan(Long idLong, int semester){</span>
-<span class="nc" id="L27">        this.idLong = idLong;</span>
-<span class="nc" id="L28">        this.semester = semester;</span>
-<span class="nc" id="L29">    }</span>
+<span class="fc" id="L26">    public SemesterPlan(Long id, Long idLong, int semester){</span>
+<span class="fc" id="L27">        this.id = id;</span>
+<span class="fc" id="L28">        this.idLong = idLong;</span>
+<span class="fc" id="L29">        this.semester = semester;</span>
+<span class="fc" id="L30">    }</span>
 
     public Long getId(){
-<span class="nc" id="L32">        return this.id;</span>
+<span class="fc" id="L33">        return this.id;</span>
     }
 
     public Long getIdLong(){
-<span class="nc" id="L36">        return this.idLong;</span>
+<span class="fc" id="L37">        return this.idLong;</span>
     }
 
     public int getSemester(){
-<span class="nc" id="L40">        return this.semester;</span>
+<span class="fc" id="L41">        return this.semester;</span>
     }
 
     public void setId(Long id) {
-<span class="nc" id="L44">        this.id = id;</span>
-<span class="nc" id="L45">    }</span>
+<span class="nc" id="L45">        this.id = id;</span>
+<span class="nc" id="L46">    }</span>
 
     public void setIdLong(Long idLong) {
-<span class="nc" id="L48">        this.idLong = idLong;</span>
-<span class="nc" id="L49">    }</span>
+<span class="nc" id="L49">        this.idLong = idLong;</span>
+<span class="nc" id="L50">    }</span>
 
     public void setSemester(int semester) {
-<span class="nc" id="L52">        this.semester = semester;</span>
-<span class="nc" id="L53">    }</span>
+<span class="nc" id="L53">        this.semester = semester;</span>
+<span class="nc" id="L54">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

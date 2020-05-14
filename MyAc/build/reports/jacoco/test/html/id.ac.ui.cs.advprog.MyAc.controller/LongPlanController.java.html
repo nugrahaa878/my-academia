@@ -1,152 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LongPlanController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MyAc</a> &gt; <a href="index.source.html" class="el_package">id.ac.ui.cs.advprog.MyAc.controller</a> &gt; <span class="el_source">LongPlanController.java</span></div><h1>LongPlanController.java</h1><pre class="source lang-java linenums">package id.ac.ui.cs.advprog.MyAc.controller;
 
 import id.ac.ui.cs.advprog.MyAc.model.LongPlan;
-import id.ac.ui.cs.advprog.MyAc.model.MatkulPlan;
-import id.ac.ui.cs.advprog.MyAc.model.SemesterPlan;
-import id.ac.ui.cs.advprog.MyAc.service.LongPlanService;
-import id.ac.ui.cs.advprog.MyAc.service.MatkulPlanService;
-import id.ac.ui.cs.advprog.MyAc.service.SemesterPlanService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import id.ac.ui.cs.advprog.MyAc.model.Matkul;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.client.RestTemplate;
 
-import java.util.List;
-import java.util.Optional;
+import java.io.IOException;
 
-@RestController
-@RequestMapping(path = &quot;/api/longplan&quot;)
-<span class="nc" id="L19">public class LongPlanController {</span>
-
-    @Autowired
-    private LongPlanService longPlanService;
-
-    @Autowired
-    private SemesterPlanService semesterPlanService;
-
-    @Autowired
-    private MatkulPlanService matkulPlanService;
+@Controller
+@RequestMapping(path = &quot;/longplan&quot;)
+<span class="fc" id="L15">public class LongPlanController {</span>
 
     @GetMapping
-    public ResponseEntity&lt;List&lt;LongPlan&gt;&gt; findAll(){
-<span class="nc" id="L32">        return new ResponseEntity&lt;&gt;(longPlanService.findAll(),HttpStatus.OK);</span>
-    }
+    public String longPlan() throws IOException {
 
-    @GetMapping(&quot;/semesterplan&quot;)
-    public ResponseEntity&lt;List&lt;SemesterPlan&gt;&gt; findAllSemester(){
-<span class="nc" id="L37">        return new ResponseEntity&lt;&gt;(semesterPlanService.findAll(),HttpStatus.OK);</span>
-    }
+<span class="fc" id="L20">        RestTemplate restTemplate = new RestTemplate();</span>
+<span class="fc" id="L21">        Matkul[] arrLongPlan = restTemplate.getForObject(&quot;http://matkulservice.herokuapp.com/matkul&quot;, Matkul[].class);</span>
 
-    @GetMapping(&quot;/semesterplan/matkulplan&quot;)
-    public ResponseEntity&lt;List&lt;MatkulPlan&gt;&gt; findAllMatkul(){
-<span class="nc" id="L42">        return new ResponseEntity&lt;&gt;(matkulPlanService.findAll(),HttpStatus.OK);</span>
-    }
-
-    @PostMapping
-    public ResponseEntity create(@RequestBody LongPlan longPlan){
-<span class="nc" id="L47">        longPlanService.register(longPlan);</span>
-<span class="nc" id="L48">        return new ResponseEntity(HttpStatus.OK);</span>
-    }
-
-    @PostMapping(&quot;/semesterplan&quot;)
-    public ResponseEntity create(@RequestBody SemesterPlan semesterPlan){
-<span class="nc" id="L53">        semesterPlanService.register(semesterPlan);</span>
-<span class="nc" id="L54">        return new ResponseEntity(HttpStatus.OK);</span>
-    }
-
-    @PostMapping(&quot;/semesterplan/matkulplan&quot;)
-    public ResponseEntity create(@RequestBody MatkulPlan matkulPlan){
-<span class="nc" id="L59">        matkulPlanService.register(matkulPlan);</span>
-<span class="nc" id="L60">        return new ResponseEntity(HttpStatus.OK);</span>
-    }
-
-    @GetMapping(&quot;/{id}&quot;)
-    public ResponseEntity&lt;LongPlan&gt; findById(@PathVariable Long id){
-<span class="nc" id="L65">        Optional&lt;LongPlan&gt; optionalLongPlan = longPlanService.findLongPlan(id);</span>
-<span class="nc bnc" id="L66" title="All 2 branches missed.">        if(!optionalLongPlan.isPresent()){</span>
-<span class="nc" id="L67">            return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        for(Matkul longplan : arrLongPlan){</span>
+<span class="fc" id="L24">            System.out.println(longplan.getNama());</span>
         }
-<span class="nc" id="L69">        return new ResponseEntity&lt;LongPlan&gt;(optionalLongPlan.get(),HttpStatus.OK);</span>
+
+<span class="fc" id="L27">        return &quot;longPlan&quot;;</span>
     }
 
-    @GetMapping(&quot;/semesterplan/{id}&quot;)
-    public ResponseEntity&lt;SemesterPlan&gt; findByIdSemester(@PathVariable Long id){
-<span class="nc" id="L74">        Optional&lt;SemesterPlan&gt; optionalSemesterPlan = semesterPlanService.findSemesterPlan(id);</span>
-<span class="nc bnc" id="L75" title="All 2 branches missed.">        if(!optionalSemesterPlan.isPresent()){</span>
-<span class="nc" id="L76">            return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span>
-        }
-<span class="nc" id="L78">        return new ResponseEntity&lt;SemesterPlan&gt;(optionalSemesterPlan.get(),HttpStatus.OK);</span>
+    @GetMapping(&quot;/edit&quot;)
+    public String longPlanEdit() {
+<span class="fc" id="L32">        return &quot;longPlanEdit&quot;;</span>
     }
 
-    @GetMapping(&quot;/semesterplan/matkulplan/{id}&quot;)
-    public ResponseEntity&lt;MatkulPlan&gt; findByIdMatkul(@PathVariable Long id){
-<span class="nc" id="L83">        Optional&lt;MatkulPlan&gt; optionalMatkulPlan = matkulPlanService.findMatkulPlan(id);</span>
-<span class="nc bnc" id="L84" title="All 2 branches missed.">        if(!optionalMatkulPlan.isPresent()){</span>
-<span class="nc" id="L85">            return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span>
-        }
-<span class="nc" id="L87">        return new ResponseEntity&lt;MatkulPlan&gt;(optionalMatkulPlan.get(),HttpStatus.OK);</span>
+    @GetMapping(&quot;/create&quot;)
+    public String longPlanCreate() {
+<span class="fc" id="L37">        return &quot;longPlanCreate&quot;;</span>
     }
-
-    @PutMapping(&quot;/{id}&quot;)
-    public ResponseEntity&lt;LongPlan&gt; update(@PathVariable Long id, @RequestBody LongPlan longPlan){
-<span class="nc" id="L92">        Optional&lt;LongPlan&gt; optionalLongPlan = longPlanService.findLongPlan(id);</span>
-<span class="nc bnc" id="L93" title="All 2 branches missed.">        if(!optionalLongPlan.isPresent()){</span>
-<span class="nc" id="L94">            return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span>
-        }
-<span class="nc" id="L96">        longPlan.setId(id);</span>
-<span class="nc" id="L97">        return new ResponseEntity&lt;&gt;(longPlanService.rewrite(longPlan),HttpStatus.OK);</span>
-    }
-
-    @PutMapping(&quot;/semesterplan/{id}&quot;)
-    public ResponseEntity&lt;SemesterPlan&gt; updateSemester(@PathVariable Long id, @RequestBody SemesterPlan semesterPlan){
-<span class="nc" id="L102">        Optional&lt;SemesterPlan&gt; optionalSemesterPlan = semesterPlanService.findSemesterPlan(id);</span>
-<span class="nc bnc" id="L103" title="All 2 branches missed.">        if(!optionalSemesterPlan.isPresent()){</span>
-<span class="nc" id="L104">            return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span>
-        }
-<span class="nc" id="L106">        semesterPlan.setId(id);</span>
-<span class="nc" id="L107">        return new ResponseEntity&lt;&gt;(semesterPlanService.rewrite(semesterPlan),HttpStatus.OK);</span>
-    }
-
-    @PutMapping(&quot;/semesterplan/matkulplan/{id}&quot;)
-    public ResponseEntity&lt;MatkulPlan&gt; updateMatkul(@PathVariable Long id, @RequestBody MatkulPlan matkulPlan){
-<span class="nc" id="L112">        Optional&lt;MatkulPlan&gt; optionalMatkulPlan = matkulPlanService.findMatkulPlan(id);</span>
-<span class="nc bnc" id="L113" title="All 2 branches missed.">        if(!optionalMatkulPlan.isPresent()){</span>
-<span class="nc" id="L114">            return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span>
-        }
-<span class="nc" id="L116">        matkulPlan.setId(id);</span>
-<span class="nc" id="L117">        return new ResponseEntity&lt;&gt;(matkulPlanService.rewrite(matkulPlan),HttpStatus.OK);</span>
-    }
-
-    @DeleteMapping(&quot;/{id}&quot;)
-    public ResponseEntity delete(@PathVariable Long id){
-<span class="nc" id="L122">        Optional&lt;LongPlan&gt; optionalLongPlan = longPlanService.findLongPlan(id);</span>
-<span class="nc bnc" id="L123" title="All 2 branches missed.">        if(!optionalLongPlan.isPresent()){</span>
-<span class="nc" id="L124">            return new ResponseEntity(HttpStatus.NOT_FOUND);</span>
-        }
-<span class="nc" id="L126">        longPlanService.erase(id);</span>
-<span class="nc" id="L127">        return new ResponseEntity(HttpStatus.OK);</span>
-    }
-
-    @DeleteMapping(&quot;/semesterplan/{id}&quot;)
-    public ResponseEntity deleteSemester(@PathVariable Long id){
-<span class="nc" id="L132">        Optional&lt;SemesterPlan&gt; optionalSemesterPlan = semesterPlanService.findSemesterPlan(id);</span>
-<span class="nc bnc" id="L133" title="All 2 branches missed.">        if(!optionalSemesterPlan.isPresent()){</span>
-<span class="nc" id="L134">            return new ResponseEntity(HttpStatus.NOT_FOUND);</span>
-        }
-<span class="nc" id="L136">        semesterPlanService.erase(id);</span>
-<span class="nc" id="L137">        return new ResponseEntity(HttpStatus.OK);</span>
-    }
-
-    @DeleteMapping(&quot;/semesterplan/matkulplan/{id}&quot;)
-    public ResponseEntity deleteMatkul(@PathVariable Long id){
-<span class="nc" id="L142">        Optional&lt;MatkulPlan&gt; optionalMatkulPlan = matkulPlanService.findMatkulPlan(id);</span>
-<span class="nc bnc" id="L143" title="All 2 branches missed.">        if(!optionalMatkulPlan.isPresent()){</span>
-<span class="nc" id="L144">            return new ResponseEntity(HttpStatus.NOT_FOUND);</span>
-        }
-<span class="nc" id="L146">        matkulPlanService.erase(id);</span>
-<span class="nc" id="L147">        return new ResponseEntity(HttpStatus.OK);</span>
-    }
-
-
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

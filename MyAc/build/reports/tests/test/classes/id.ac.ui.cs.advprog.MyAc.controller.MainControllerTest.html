@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,11 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<<<<<<< HEAD
-<div class="counter">1.874s</div>
-=======
-<div class="counter">0.380s</div>
->>>>>>> InformasiDetailPerMatkul
+<div class="counter">1.056s</div>
 <p>duration</p>
 </div>
 </td>
@@ -54,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">50%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -65,120 +61,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard output</a>
+<a href="#tab1">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="whenIndexUrlAccessedShouldReturnIndexPage()"></a>
-<h3 class="failures">whenIndexUrlAccessedShouldReturnIndexPage()</h3>
-<span class="code">
-<pre>java.lang.AssertionError: View name expected:&lt;index&gt; but was:&lt;welcome&gt;
-	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
-	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
-	at org.springframework.test.web.servlet.result.ViewResultMatchers.lambda$name$1(ViewResultMatchers.java:69)
-	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:196)
-	at id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest.whenIndexUrlAccessedShouldReturnIndexPage(MainControllerTest.java:38)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:675)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:125)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:132)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:124)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:74)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:104)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:62)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:43)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:35)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:202)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:198)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220)
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188)
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy5.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:132)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:412)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -189,50 +78,31 @@
 </tr>
 </thead>
 <tr>
-<<<<<<< HEAD
 <td class="success">whenHomeUrlAccessedShouldReturnHomePage()</td>
-<td class="success">0.242s</td>
+<td class="success">0.148s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">whenIndexUrlAccessedShouldReturnIndexPage()</td>
-<td class="success">0.137s</td>
+<td class="success">0.196s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">whenLoginUrlAccessedShouldReturnLoginPage()</td>
-<td class="success">1.495s</td>
-=======
-<td class="failures">whenIndexUrlAccessedShouldReturnIndexPage()</td>
-<td class="failures">0.033s</td>
-<td class="failures">failed</td>
-</tr>
-<tr>
-<td class="success">whenLoginUrlAccessedShouldReturnLoginPage()</td>
-<td class="success">0.347s</td>
->>>>>>> InformasiDetailPerMatkul
+<td class="success">0.712s</td>
 <td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<<<<<<< HEAD
-<pre>2020-05-13 21:58:19.185  INFO 4932 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest], using SpringBootContextLoader
-2020-05-13 21:58:19.188  INFO 4932 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2020-05-13 21:58:19.195  INFO 4932 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest]: MainControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2020-05-13 21:58:19.226  INFO 4932 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration id.ac.ui.cs.advprog.MyAc.MyAcApplication for test class id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest
-2020-05-13 21:58:19.232  INFO 4932 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2020-05-13 21:58:19.308  INFO 4932 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@51ac20f8, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@571d78e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@47d191c7, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7276865, org.springframework.test.context.support.DirtiesContextTestExecutionListener@37bc2399, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3c7a4f47, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@77eebea6, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@4bb6847e, org.springframework.test.context.event.EventPublishingTestExecutionListener@1dc0d67a, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@732ea2f2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@71b729bf, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@e5dc683, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1535b234, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@138abb52, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5bb8824d]
-=======
-<pre>2020-05-14 14:32:45.919  INFO 23072 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest], using SpringBootContextLoader
-2020-05-14 14:32:45.922  INFO 23072 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2020-05-14 14:32:45.923  INFO 23072 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest]: MainControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2020-05-14 14:32:45.933  INFO 23072 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration id.ac.ui.cs.advprog.MyAc.MyAcApplication for test class id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest
-2020-05-14 14:32:45.934  INFO 23072 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2020-05-14 14:32:45.937  INFO 23072 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24cdd09a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@66fbb40e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5ea6b826, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6ba284c7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2121d029, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1ac14bc7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@71cdb731, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@eb69173, org.springframework.test.context.event.EventPublishingTestExecutionListener@2139a814, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@31364087, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@2dde1daf, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@17592c6e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7bcc4f99, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@78fd0a1f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@251353ca]
->>>>>>> InformasiDetailPerMatkul
+<pre>2020-05-14 15:08:02.210  INFO 7340 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest], using SpringBootContextLoader
+2020-05-14 15:08:02.217  INFO 7340 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-05-14 15:08:02.219  INFO 7340 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest]: MainControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-05-14 15:08:02.329  INFO 7340 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration id.ac.ui.cs.advprog.MyAc.MyAcApplication for test class id.ac.ui.cs.advprog.MyAc.controller.MainControllerTest
+2020-05-14 15:08:02.344  INFO 7340 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-05-14 15:08:02.358  INFO 7340 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2f7c241e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3598e968, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@66b57042, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@56d74627, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1845d437, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6a64adfe, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@271ee790, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@4b946b2a, org.springframework.test.context.event.EventPublishingTestExecutionListener@7d46fa03, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@3282b308, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@62f0f0af, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@a550ae0, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@40097f4b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@67348eb1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2a46f70]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -242,88 +112,15 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.2.4.RELEASE)
 
-<<<<<<< HEAD
-2020-05-13 21:58:19.741  INFO 4932 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : Starting MainControllerTest on LAPTOP-82VCQFF9 with PID 4932 (started by Ali Irsyaad in C:\Users\Ali Irsyaad\OneDrive - UNIVERSITAS INDONESIA\Ali's Document\Semester 4\AdPro\myacademy\MyAc)
-2020-05-13 21:58:19.816  INFO 4932 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : No active profile set, falling back to default profiles: default
-2020-05-13 21:58:25.049  INFO 4932 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5306ba6d, org.springframework.security.web.context.SecurityContextPersistenceFilter@450da31d, org.springframework.security.web.header.HeaderWriterFilter@f120455, org.springframework.security.web.csrf.CsrfFilter@6e07e59, org.springframework.security.web.authentication.logout.LogoutFilter@657bcaf8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1388c287, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@421c706c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d33e4d6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@407d9eba, org.springframework.security.web.session.SessionManagementFilter@401a1ff1, org.springframework.security.web.access.ExceptionTranslationFilter@563a358d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@59aed2a8]
-2020-05-13 21:58:26.706  INFO 4932 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-05-13 21:58:26.981  INFO 4932 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-05-13 21:58:28.954  INFO 4932 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2020-05-13 21:58:28.965  INFO 4932 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2020-05-13 21:58:29.068  INFO 4932 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 99 ms
-2020-05-13 21:58:29.237  INFO 4932 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : Started MainControllerTest in 9.907 seconds (JVM running for 91.512)
-=======
-2020-05-14 14:32:46.007  INFO 23072 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : Starting MainControllerTest on LAPTOP-930TCP7M with PID 23072 (started by Gafi Irfandi in C:\Users\Gafi Irfandi\OneDrive\Documents\Semester 4\AdPro\MyAcClone\myacademy\MyAc)
-2020-05-14 14:32:46.010  INFO 23072 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : No active profile set, falling back to default profiles: default
-2020-05-14 14:32:46.713  INFO 23072 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1b2bddc4, org.springframework.security.web.context.SecurityContextPersistenceFilter@61c3ee64, org.springframework.security.web.header.HeaderWriterFilter@64c7ce1b, org.springframework.security.web.csrf.CsrfFilter@5a3c5209, org.springframework.security.web.authentication.logout.LogoutFilter@a5aea0f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7e2d8b41, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4dd7c601, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@173a7eb6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@290a31f2, org.springframework.security.web.session.SessionManagementFilter@59d7434d, org.springframework.security.web.access.ExceptionTranslationFilter@581e94c1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@657019c]
-2020-05-14 14:32:46.946  INFO 23072 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-05-14 14:32:46.989  INFO 23072 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-05-14 14:32:47.220  INFO 23072 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2020-05-14 14:32:47.220  INFO 23072 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2020-05-14 14:32:47.237  INFO 23072 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 16 ms
-2020-05-14 14:32:47.259  INFO 23072 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : Started MainControllerTest in 1.316 seconds (JVM running for 12.388)
-
-MockHttpServletRequest:
-      HTTP Method = GET
-      Request URI = /
-       Parameters = {}
-          Headers = []
-             Body = &lt;no character encoding set&gt;
-    Session Attrs = {SPRING_SECURITY_CONTEXT=org.springframework.security.core.context.SecurityContextImpl@c609baa6: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@c609baa6: Principal: org.springframework.security.core.userdetails.User@ca9d020d: Username: spring; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_USER; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_USER}
-
-Handler:
-             Type = id.ac.ui.cs.advprog.MyAc.controller.MainController
-           Method = id.ac.ui.cs.advprog.MyAc.controller.MainController#root()
-
-Async:
-    Async started = false
-     Async result = null
-
-Resolved Exception:
-             Type = null
-
-ModelAndView:
-        View name = welcome
-             View = null
-            Model = null
-
-FlashMap:
-       Attributes = null
-
-MockHttpServletResponse:
-           Status = 200
-    Error message = null
-          Headers = [Content-Language:&quot;en&quot;, Content-Type:&quot;text/html;charset=UTF-8&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
-     Content type = text/html;charset=UTF-8
-             Body = &lt;!DOCTYPE html&gt;
-&lt;html&gt;
-
-&lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot; /&gt;
-    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
-
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&quot; integrity=&quot;sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T&quot; crossorigin=&quot;anonymous&quot;&gt;
-
-    &lt;title&gt;Registration&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;div style=&quot;padding: 100px&quot;&gt;
-    &lt;h1&gt;Welcome page&lt;/h1&gt;
-    &lt;a href=&quot;/login&quot;&gt;Login&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.slim.min.js&quot; integrity=&quot;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js&quot; integrity=&quot;sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js&quot; integrity=&quot;sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-    Forwarded URL = null
-   Redirected URL = null
-          Cookies = []
->>>>>>> InformasiDetailPerMatkul
+2020-05-14 15:08:02.856  INFO 7340 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : Starting MainControllerTest on LAPTOP-82VCQFF9 with PID 7340 (started by Ali Irsyaad in C:\Users\Ali Irsyaad\OneDrive - UNIVERSITAS INDONESIA\Ali's Document\Semester 4\AdPro\myacademy\MyAc)
+2020-05-14 15:08:02.858  INFO 7340 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : No active profile set, falling back to default profiles: default
+2020-05-14 15:08:09.112  INFO 7340 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f939315, org.springframework.security.web.context.SecurityContextPersistenceFilter@42df329c, org.springframework.security.web.header.HeaderWriterFilter@1150f4ea, org.springframework.security.web.csrf.CsrfFilter@2b7b0b54, org.springframework.security.web.authentication.logout.LogoutFilter@1c26c135, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@105bc517, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d145cef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7bf50203, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f005501, org.springframework.security.web.session.SessionManagementFilter@310dbe42, org.springframework.security.web.access.ExceptionTranslationFilter@175c23a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@781c84b4]
+2020-05-14 15:08:11.360  INFO 7340 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-14 15:08:11.763  INFO 7340 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-14 15:08:14.116  INFO 7340 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-05-14 15:08:14.120  INFO 7340 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-05-14 15:08:14.188  INFO 7340 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 59 ms
+2020-05-14 15:08:14.729  INFO 7340 --- [    Test worker] i.a.u.c.a.M.c.MainControllerTest         : Started MainControllerTest in 12.351 seconds (JVM running for 94.232)
 </pre>
 </span>
 </div>
@@ -335,11 +132,7 @@ MockHttpServletResponse:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<<<<<<< HEAD
-<a href="http://www.gradle.org">Gradle 6.3</a> at May 13, 2020, 9:59:05 PM</p>
-=======
-<a href="http://www.gradle.org">Gradle 6.3</a> at May 14, 2020, 2:32:53 PM</p>
->>>>>>> InformasiDetailPerMatkul
+<a href="http://www.gradle.org">Gradle 6.3</a> at May 14, 2020, 3:08:46 PM</p>
 </div>
 </div>
 </body>

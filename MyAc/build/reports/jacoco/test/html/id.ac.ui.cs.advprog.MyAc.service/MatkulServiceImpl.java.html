@@ -12,26 +12,11 @@ import java.util.Optional;
 
 
 @Service
-<<<<<<< HEAD
-<span class="fc" id="L13">public class MatkulServiceImpl implements MatkulService {</span>
-    // TODO: implementasi semua method di MatkulService.java. Coba lihat dokumentasi JpaRepository untuk mengimplementasikan Service
-=======
 <span class="nc" id="L15">public class MatkulServiceImpl implements MatkulService {</span>
->>>>>>> InformasiDetailPerMatkul
 
 <span class="nc" id="L17">    private RestTemplate restTemplate = new RestTemplate();</span>
 <span class="nc" id="L18">    Matkul[] allMatkul = restTemplate.getForObject(&quot;http://matkulservice.herokuapp.com/matkul&quot; , Matkul[].class);</span>
 
-<<<<<<< HEAD
-    public List&lt;Matkul&gt; findAll(){
-<span class="fc" id="L20">        return matkulRepository.findAll();</span>
-    }
-    public Optional&lt;Matkul&gt; findMatkul(String kode){
-<span class="fc" id="L23">        return matkulRepository.findById(kode);</span>
-    }
-    public List&lt;Matkul&gt; findMatkulBySemester(int semester){
-<span class="fc" id="L26">        return matkulRepository.findMatkulBySemester(semester);</span>
-=======
     public Matkul[] findAll(){
 <span class="nc" id="L21">        return allMatkul;</span>
     }
@@ -46,7 +31,6 @@ import java.util.Optional;
             }
         }
 <span class="nc" id="L33">        return filteredMatkul;</span>
->>>>>>> InformasiDetailPerMatkul
     }
     public List&lt;Matkul&gt; findMatkulBySemester(String semester){
 <span class="nc" id="L36">        List&lt;Matkul&gt; filteredMatkul = new ArrayList&lt;&gt;();</span>
