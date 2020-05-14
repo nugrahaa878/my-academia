@@ -1,3 +1,5 @@
+[![pipeline status](https://gitlab.com/gafiirfandi/myacademy/badges/master/pipeline.svg)](https://gitlab.com/gafiirfandi/myacademy/commits/master)
+[![coverage report](https://gitlab.com/gafiirfandi/myacademy/badges/master/coverage.svg)](https://gitlab.com/gafiirfandi/myacademy/commits/master)
 # My Academy 
 
 Final project for Advance Programming in Faculty of Computer Science Universitas Indonesia
