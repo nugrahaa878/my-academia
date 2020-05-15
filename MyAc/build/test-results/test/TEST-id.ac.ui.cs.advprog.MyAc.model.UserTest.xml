@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="id.ac.ui.cs.advprog.MyAc.model.UserTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2020-05-15T08:42:52" hostname="DESKTOP-VVI2B95" time="0.055">
+  <properties/>
+  <testcase name="testConstructorUser()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.002"/>
+  <testcase name="testSetPassword()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.002"/>
+  <testcase name="testGetPassword()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.002"/>
+  <testcase name="testGetEmail()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.002"/>
+  <testcase name="testGetRoles()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.008"/>
+  <testcase name="testSetFirstName()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.003"/>
+  <testcase name="testToString()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.002"/>
+  <testcase name="testSetLastName()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.002"/>
+  <testcase name="testGetLastName()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.002"/>
+  <testcase name="testGetFirstName()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.002"/>
+  <testcase name="testSetUserId()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.001"/>
+  <testcase name="testGetUserId()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.001"/>
+  <testcase name="testDefaultConstructor()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.001"/>
+  <testcase name="testSetEmail()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.001"/>
+  <testcase name="testSetRoles()" classname="id.ac.ui.cs.advprog.MyAc.model.UserTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
