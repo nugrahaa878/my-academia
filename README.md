@@ -2,6 +2,9 @@
 
 *Final project for Advance Programming in Faculty of Computer Science Universitas Indonesia*
 
+*Link to website :*
+http://myacademia.herokuapp.com/
+
 ## Group 7 Member :
 - Ali Irsyaad Nursyaban
 - Alvin Hariman
