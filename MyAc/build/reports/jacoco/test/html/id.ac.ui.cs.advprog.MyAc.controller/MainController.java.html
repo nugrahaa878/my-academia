@@ -10,19 +10,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.security.Principal;
 
 @Controller
-<span class="fc" id="L13">public class MainController {</span>
+<span class="nc" id="L13">public class MainController {</span>
 
     @Autowired
     UserRepository userRepository;
 
     @GetMapping(&quot;/&quot;)
     public String root() {
-<span class="fc" id="L20">        return &quot;welcome&quot;;</span>
+<span class="nc" id="L20">        return &quot;welcome&quot;;</span>
     }
 
     @GetMapping(&quot;/login&quot;)
     public String login(Model model) {
-<span class="fc" id="L25">        return &quot;login&quot;;</span>
+<span class="nc" id="L25">        return &quot;login&quot;;</span>
     }
 
     @GetMapping(value = &quot;/home&quot;)

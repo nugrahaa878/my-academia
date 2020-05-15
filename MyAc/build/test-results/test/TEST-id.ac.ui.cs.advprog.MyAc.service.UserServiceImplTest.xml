@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="id.ac.ui.cs.advprog.MyAc.service.UserServiceImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-15T08:26:21" hostname="DESKTOP-VVI2B95" time="0.136">
-  <properties/>
-  <testcase name="testSave()" classname="id.ac.ui.cs.advprog.MyAc.service.UserServiceImplTest" time="0.136"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
