@@ -10,30 +10,15 @@
 - Gafi Irfandi
 
 ## Branch Status
-- master :
-<br/>
-[![pipeline status](https://gitlab.com/gafiirfandi/myacademy/badges/master/pipeline.svg)](https://gitlab.com/gafiirfandi/myacademy/commits/master)
-[![coverage report](https://gitlab.com/gafiirfandi/myacademy/badges/master/coverage.svg)](https://gitlab.com/gafiirfandi/myacademy/-/commits/master)
-- Ali: 
-<br/>
-[![pipeline status](https://gitlab.com/gafiirfandi/myacademy/badges/ali/pipeline.svg)](https://gitlab.com/gafiirfandi/myacademy/commits/ali)
-[![coverage report](https://gitlab.com/gafiirfandi/myacademy/badges/ali/coverage.svg)](https://gitlab.com/gafiirfandi/myacademy/-/commits/ali)
-- Alvin : 
-<br/>
-[![pipeline status](https://gitlab.com/gafiirfandi/myacademy/badges/Alvin/pipeline.svg)](https://gitlab.com/gafiirfandi/myacademy/commits/Alvin)
-[![coverage report](https://gitlab.com/gafiirfandi/myacademy/badges/Alvin/coverage.svg)](https://gitlab.com/gafiirfandi/myacademy/-/commits/Alvin)
-- Ari - login : (Login, Registration, Homepage)
-<br/>
-[![pipeline status](https://gitlab.com/gafiirfandi/myacademy/badges/login/pipeline.svg)](https://gitlab.com/gafiirfandi/myacademy/commits/login)
-[![coverage report](https://gitlab.com/gafiirfandi/myacademy/badges/login/coverage.svg)](https://gitlab.com/gafiirfandi/myacademy/-/commits/login)
-- forum : 
-<br/>
-[![pipeline status](https://gitlab.com/gafiirfandi/myacademy/badges/forum/pipeline.svg)](https://gitlab.com/gafiirfandi/myacademy/commits/forum)
-[![coverage report](https://gitlab.com/gafiirfandi/myacademy/badges/forum/coverage.svg)](https://gitlab.com/gafiirfandi/myacademy/-/commits/forum)
-- InformasiDetailPerMatkul : 
-<br/>
-[![pipeline status](https://gitlab.com/gafiirfandi/myacademy/badges/InformasiDetailPerMatkul/pipeline.svg)](https://gitlab.com/gafiirfandi/myacademy/commits/InformasiDetailPerMatkul)
-[![coverage report](https://gitlab.com/gafiirfandi/myacademy/badges/InformasiDetailPerMatkul/coverage.svg)](https://gitlab.com/gafiirfandi/myacademy/-/commits/InformasiDetailPerMatkul)
+
+| Branch | Pipeline | Coverage |
+| ------ | ------ | ------ |
+| Master | [![pipeline status](https://gitlab.com/gafiirfandi/myacademy/badges/master/pipeline.svg)](https://gitlab.com/gafiirfandi/myacademy/commits/master) | [![coverage report](https://gitlab.com/gafiirfandi/myacademy/badges/master/coverage.svg)](https://gitlab.com/gafiirfandi/myacademy/-/commits/master) |
+| ali | [![pipeline status](https://gitlab.com/gafiirfandi/myacademy/badges/ali/pipeline.svg)](https://gitlab.com/gafiirfandi/myacademy/commits/ali) | [![coverage report](https://gitlab.com/gafiirfandi/myacademy/badges/ali/coverage.svg)](https://gitlab.com/gafiirfandi/myacademy/-/commits/ali) |
+| Alvin | [![pipeline status](https://gitlab.com/gafiirfandi/myacademy/badges/Alvin/pipeline.svg)](https://gitlab.com/gafiirfandi/myacademy/commits/Alvin) | [![coverage report](https://gitlab.com/gafiirfandi/myacademy/badges/Alvin/coverage.svg)](https://gitlab.com/gafiirfandi/myacademy/-/commits/Alvin) |
+| login - Ari | [![pipeline status](https://gitlab.com/gafiirfandi/myacademy/badges/login/pipeline.svg)](https://gitlab.com/gafiirfandi/myacademy/commits/login) | [![coverage report](https://gitlab.com/gafiirfandi/myacademy/badges/login/coverage.svg)](https://gitlab.com/gafiirfandi/myacademy/-/commits/login) |
+| forum - Ilham| [![pipeline status](https://gitlab.com/gafiirfandi/myacademy/badges/forum/pipeline.svg)](https://gitlab.com/gafiirfandi/myacademy/commits/forum) | [![coverage report](https://gitlab.com/gafiirfandi/myacademy/badges/forum/coverage.svg)](https://gitlab.com/gafiirfandi/myacademy/-/commits/forum)|
+| InformasiDetailPerMatkul - Gafi| [![pipeline status](https://gitlab.com/gafiirfandi/myacademy/badges/InformasiDetailPerMatkul/pipeline.svg)](https://gitlab.com/gafiirfandi/myacademy/commits/InformasiDetailPerMatkul) | [![coverage report](https://gitlab.com/gafiirfandi/myacademy/badges/InformasiDetailPerMatkul/coverage.svg)](https://gitlab.com/gafiirfandi/myacademy/-/commits/InformasiDetailPerMatkul) |
 
 ## Description
 MyAcademia adalah sebuah platform yang membantu mahasiswa UI khususnya Fakultas Ilmu Komputer untuk merencanakan studi mereka baik jangka pendek mapun jangka panjang
