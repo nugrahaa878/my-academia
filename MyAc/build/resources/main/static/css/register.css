@@ -1,0 +1,110 @@
+html, body {
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.left {
+    background-color: #FFCC00;
+    text-align: center;
+    margin: 0;
+    padding-top: 150px;
+}
+
+.login-quotes {
+    padding: 10px 5vw;
+}
+
+.left h4 {
+    font-size: 20px;
+    color: #FDFFF2;
+    font-style: italic;
+}
+
+.left p {
+    font-size: 16px;
+    color: #FDFFF2;
+    font-style: italic;
+}
+
+.sign-container {
+    border: 3px solid #FFCC00;
+    margin: 100px 8vw;
+    padding: 30px;
+    /* text-align: center; */
+    border-radius: 20px;
+}
+
+.sign-container h4 {
+    font-weight: bold;
+    color: #B74F2C;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+input {
+    background-color: #FFCC00 !important;
+    border-style: none;
+    color: #FDFFF2 !important;
+    outline: none !important;
+    border-radius: 10px !important;
+}
+
+.btn {
+    background-color: #B74F2C !important;
+    border-radius: 15px;
+    padding: 5px 20px;
+    margin-top: 20px;
+}
+
+.button-container {
+    text-align: center;
+    width: 100px;
+    outline: none !important;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.register-container {
+    text-align: center;
+}
+
+.register-text {
+    color: #FFCC00;
+    text-decoration: none;
+}
+
+p {
+    color: red;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .left {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .login-quotes {
+        padding-bottom: 50px;
+    }
+
+    .login-quotes h4 {
+        font-size: 15px;
+    }
+
+    .login-quotes p {
+        font-size: 12px;
+    }
+
+    .sign-container {
+        margin: 50px 10px;
+    }
+}

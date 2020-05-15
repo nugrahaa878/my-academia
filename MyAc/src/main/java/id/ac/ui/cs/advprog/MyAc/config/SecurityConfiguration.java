@@ -25,6 +25,8 @@ public class SecurityConfiguration  extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers(
                         "/registration**",
+                        "/",
+                        "/static/**",
                         "/js/**",
                         "/css/**",
                         "/img/**",
@@ -41,6 +43,8 @@ public class SecurityConfiguration  extends WebSecurityConfigurerAdapter {
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl("/login?logout")
                 .permitAll();
+
+        http.formLogin().defaultSuccessUrl("/home", true);
     }
 
     @Bean

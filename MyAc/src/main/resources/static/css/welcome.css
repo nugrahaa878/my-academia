@@ -1,0 +1,81 @@
+html, body {
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #FFCC00;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    padding-top: 150px;
+}
+
+.kanan {
+    color: #FDFFF2;
+    margin-left: -40px;
+}
+
+.kanan h1 {
+    font-weight: bold;
+    font-size: 48;
+    margin-top: 100px;
+}
+
+.kanan h4 {
+    font-weight: normal;
+    font-size: 22px;
+    font-style: italic;
+    margin-top: 18px;
+}
+
+.kanan button {
+    width: 100px;
+    border-radius: 12px;
+    color: #B74F2C;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.kiri img {
+    height: 400px;
+}
+
+.a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .kiri img {
+        height: 350px;
+    }
+
+    .main-container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        padding-top: 30px;
+    }
+
+    .kanan {
+        color: #FDFFF2;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .kanan h1 {
+        font-weight: normal;
+        font-size: 36px;
+        margin-top: 0px;
+    }
+
+    .kanan h4 {
+        font-weight: normal;
+        font-size: 18px;
+        font-style: italic;
+        margin-top: 18px;
+    }
+
+}

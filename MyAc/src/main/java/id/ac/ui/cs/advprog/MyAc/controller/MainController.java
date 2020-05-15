@@ -1,15 +1,23 @@
 package id.ac.ui.cs.advprog.MyAc.controller;
 
+import id.ac.ui.cs.advprog.MyAc.model.User;
+import id.ac.ui.cs.advprog.MyAc.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.security.Principal;
+
 @Controller
 public class MainController {
 
+    @Autowired
+    UserRepository userRepository;
+
     @GetMapping("/")
     public String root() {
-        return "index";
+        return "welcome";
     }
 
     @GetMapping("/login")
@@ -21,4 +29,12 @@ public class MainController {
     public String userIndex() {
         return "user/index";
     }
+
+    @GetMapping("/home")
+    public String home(Principal principal, Model model) {
+        User user = userRepository.findByEmail(principal.getName());
+        model.addAttribute("nama", user.getFirstName());
+        return "index";
+    }
+
 }

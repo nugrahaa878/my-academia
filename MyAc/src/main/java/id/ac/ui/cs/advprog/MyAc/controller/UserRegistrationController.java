@@ -39,6 +39,14 @@ public class UserRegistrationController {
             result.rejectValue("email", null, "There is already an account registered with that email");
         }
 
+        if (!userDto.getEmail().equals(userDto.getConfirmEmail()) ) {
+            result.rejectValue("confirmEmail", null, "Email didnt match");
+        }
+
+        if (!userDto.getPassword().equals(userDto.getConfirmPassword())) {
+            result.rejectValue("confirmPassword", null, "Password didnt match");
+        }
+
         if (result.hasErrors()) {
             return "registration";
         }
@@ -48,3 +56,4 @@ public class UserRegistrationController {
     }
 
 }
+

@@ -1,6 +1,6 @@
 package id.ac.ui.cs.advprog.MyAc.controller;
 
-import id.ac.ui.cs.advprog.MyAc.service.PostServiceImpl;
+import id.ac.ui.cs.advprog.MyAc.repository.UserRepository;
 import id.ac.ui.cs.advprog.MyAc.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +10,9 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+
+import java.security.Principal;
+
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.web.servlet.function.ServerResponse.status;
 
@@ -21,6 +24,12 @@ public class MainControllerTest {
 
     @MockBean
     private UserService userService;
+
+    @MockBean
+    private UserRepository userRepository;
+
+    @MockBean
+    private Principal principal;
 
     @WithMockUser(username = "spring")
     @Test
@@ -35,6 +44,16 @@ public class MainControllerTest {
     public void whenIndexUrlAccessedShouldReturnIndexPage() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.view().name("index"));
+                .andExpect(MockMvcResultMatchers.view().name("welcome"));
     }
+
+//    @WithMockUser(username = "spring")
+//    @Test
+//    public void whenHomeUrlAccessedShouldReturnHomePage() throws Exception {
+//        mockMvc.perform(get("/home"))
+//                .andExpect(MockMvcResultMatchers.status().isOk())
+//                .andExpect(MockMvcResultMatchers.model().attributeExists("nama"))
+//                .andExpect(MockMvcResultMatchers.view().name("index"));
+//    }
 }
+

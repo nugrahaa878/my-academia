@@ -1,7 +1,5 @@
 package id.ac.ui.cs.advprog.MyAc.controller;
 
-import id.ac.ui.cs.advprog.MyAc.repository.ShortPlanRepository;
-import id.ac.ui.cs.advprog.MyAc.service.ShortPlanService;
 import id.ac.ui.cs.advprog.MyAc.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
