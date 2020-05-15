@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-15T04:52:04" hostname="DESKTOP-VVI2B95" time="0.012">
+<testsuite name="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-05-15T08:26:11" hostname="DESKTOP-VVI2B95" time="0.032">
   <properties/>
-  <testcase name="testSetFirstName()" classname="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" time="0.012"/>
+  <testcase name="testSetPassword()" classname="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" time="0.014"/>
+  <testcase name="testSetFirstName()" classname="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" time="0.001"/>
+  <testcase name="testSetLastName()" classname="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" time="0.001"/>
+  <testcase name="testSetConfirmEmail()" classname="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" time="0.001"/>
+  <testcase name="testSetConfirmPassword()" classname="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" time="0.002"/>
+  <testcase name="testSetEmail()" classname="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" time="0.002"/>
+  <testcase name="testSetTerms()" classname="id.ac.ui.cs.advprog.MyAc.dto.UserRegistrationDtoTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

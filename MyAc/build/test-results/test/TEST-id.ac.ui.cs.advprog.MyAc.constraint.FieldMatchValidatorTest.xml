@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="id.ac.ui.cs.advprog.MyAc.constraint.FieldMatchValidatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-15T08:26:21" hostname="DESKTOP-VVI2B95" time="0.002">
+  <properties/>
+  <testcase name="testInitialize" classname="id.ac.ui.cs.advprog.MyAc.constraint.FieldMatchValidatorTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

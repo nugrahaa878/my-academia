@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="id.ac.ui.cs.advprog.MyAc.MyAcApplicationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-05-15T08:26:11" hostname="DESKTOP-VVI2B95" time="9.589">
+  <properties/>
+  <testcase name="main()" classname="id.ac.ui.cs.advprog.MyAc.MyAcApplicationTest" time="9.589"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.4.RELEASE)
+
+2020-05-15 01:26:12.094  INFO 13400 --- [    Test worker] i.ac.ui.cs.advprog.MyAc.MyAcApplication  : Starting MyAcApplication on DESKTOP-VVI2B95 with PID 13400 (started by USER in D:\Project\myacademy\myacademy\MyAc)
+2020-05-15 01:26:12.095  INFO 13400 --- [    Test worker] i.ac.ui.cs.advprog.MyAc.MyAcApplication  : No active profile set, falling back to default profiles: default
+2020-05-15 01:26:12.854  INFO 13400 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-15 01:26:13.024  INFO 13400 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 141ms. Found 1 JPA repository interfaces.
+2020-05-15 01:26:13.500  INFO 13400 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-15 01:26:14.093  INFO 13400 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-15 01:26:14.129  INFO 13400 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-15 01:26:14.130  INFO 13400 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-05-15 01:26:14.556  INFO 13400 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-15 01:26:14.557  INFO 13400 --- [    Test worker] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2452 ms
+2020-05-15 01:26:15.110  INFO 13400 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-15 01:26:15.451  INFO 13400 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-05-15 01:26:15.607  INFO 13400 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-15 01:26:16.127  INFO 13400 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-15 01:26:16.511  INFO 13400 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-15 01:26:16.573  INFO 13400 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-05-15 01:26:19.954  INFO 13400 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-15 01:26:19.984  INFO 13400 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-15 01:26:20.172  WARN 13400 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-15 01:26:21.173  INFO 13400 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ebe012e, org.springframework.security.web.context.SecurityContextPersistenceFilter@70cf2f28, org.springframework.security.web.header.HeaderWriterFilter@47ad49a, org.springframework.security.web.csrf.CsrfFilter@ee2b6c3, org.springframework.security.web.authentication.logout.LogoutFilter@43f5b7fe, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1bb2c39f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@756a966a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27665259, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5743867c, org.springframework.security.web.session.SessionManagementFilter@6b80d835, org.springframework.security.web.access.ExceptionTranslationFilter@729ef7cc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@57264759]
+2020-05-15 01:26:21.290  INFO 13400 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-15 01:26:21.329  INFO 13400 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-15 01:26:21.569  INFO 13400 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-15 01:26:21.571  INFO 13400 --- [    Test worker] i.ac.ui.cs.advprog.MyAc.MyAcApplication  : Started MyAcApplication in 9.582 seconds (JVM running for 28.245)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

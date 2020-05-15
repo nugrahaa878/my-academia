@@ -28,43 +28,52 @@ public class UserServiceImplTest {
     private UserRepository userRepository;
 
     @Mock
-    private UserServiceImpl userService;
+    private UserServiceImpl userServiceImpl;
 
     @MockBean
     private BCryptPasswordEncoder passwordEncoder;
 
-    @Mock
     private UserRegistrationDto userRegistrationDto;
 
     private User user;
 
-    @BeforeEach
-    private void setUp() throws Exception {
-        this.user = new User();
-        this.user.setFirstName("Ari");
-        this.user.setLastName("Nugraha");
-        this.user.setEmail("nugrahaa878@gmail.com");
-        this.user.setPassword("admin123");
-    }
+//    @Test
+//    public void testFindByEmail() {
+//        user = new User();
+//        user.setEmail("nugrahaa878@gmail.com");
+//        user.setFirstName("Ari");
+//        user.setLastName("Nugraha");
+//        user.setPassword("admin123");
+//        user.setRoles(null);
+//
+//        userRepository.save(user);
+//
+//        User cari = userServiceImpl.findByEmail("nugrahaa878@gmail.com");
+//        assertEquals(user, cari);
+//
+//    }
 
     @Test
-    public void testWhenSaveCalledShouldSaveDto() {
-        userService.save(this.userRegistrationDto);
+    public void testSave() {
+        UserRegistrationDto userRegistrationDto = new UserRegistrationDto();
+        userRegistrationDto.setFirstName("Ari");
+        userRegistrationDto.setLastName("Nugraha");
+        userRegistrationDto.setPassword("admin123");
+        userRegistrationDto.setConfirmPassword("admin123");
+        userRegistrationDto.setEmail("nugrahaa878@gmail.com");
+        userRegistrationDto.setConfirmEmail("nugrahaa878@gmail.com");
+        userRegistrationDto.setTerms(true);
 
-        verify(userService, times(1)).save(this.userRegistrationDto);
+        User user = new User();
+        user.setFirstName(userRegistrationDto.getFirstName());
+        user.setLastName(userRegistrationDto.getLastName());
+        user.setEmail(userRegistrationDto.getEmail());
+        user.setPassword(userRegistrationDto.getPassword());
+        user.setRoles(Arrays.asList(new Role("ROLE_USER")));
+
+        User user2 = this.userServiceImpl.save(userRegistrationDto);
+
+        assertEquals(user2, userServiceImpl.save(userRegistrationDto));
     }
 
-    @Test
-    public void testWhenFindByEmailCalledShouldCallFindByEmail() {
-        userService.findByEmail(this.user.getEmail());
-
-        verify(userService, times(1)).findByEmail(this.user.getEmail());
-    }
-
-    @Test
-    public void testWhenLoadByUserNameCalledShouldCallLoadByUsername() {
-        userService.loadUserByUsername(this.user.getEmail());
-
-        verify(userService, times(1)).loadUserByUsername(this.user.getEmail());
-    }
 }

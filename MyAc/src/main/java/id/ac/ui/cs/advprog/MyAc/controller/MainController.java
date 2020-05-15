@@ -25,12 +25,7 @@ public class MainController {
         return "login";
     }
 
-    @GetMapping("/user")
-    public String userIndex() {
-        return "user/index";
-    }
-
-    @GetMapping("/home")
+    @GetMapping(value = "/home")
     public String home(Principal principal, Model model) {
         User user = userRepository.findByEmail(principal.getName());
         model.addAttribute("nama", user.getFirstName());

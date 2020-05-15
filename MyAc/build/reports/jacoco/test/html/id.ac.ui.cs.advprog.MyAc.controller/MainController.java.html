@@ -25,16 +25,11 @@ import java.security.Principal;
 <span class="fc" id="L25">        return &quot;login&quot;;</span>
     }
 
-    @GetMapping(&quot;/user&quot;)
-    public String userIndex() {
-<span class="nc" id="L30">        return &quot;user/index&quot;;</span>
-    }
-
-    @GetMapping(&quot;/home&quot;)
+    @GetMapping(value = &quot;/home&quot;)
     public String home(Principal principal, Model model) {
-<span class="nc" id="L35">        User user = userRepository.findByEmail(principal.getName());</span>
-<span class="nc" id="L36">        model.addAttribute(&quot;nama&quot;, user.getFirstName());</span>
-<span class="nc" id="L37">        return &quot;index&quot;;</span>
+<span class="nc" id="L30">        User user = userRepository.findByEmail(principal.getName());</span>
+<span class="nc" id="L31">        model.addAttribute(&quot;nama&quot;, user.getFirstName());</span>
+<span class="nc" id="L32">        return &quot;index&quot;;</span>
     }
 
 }
